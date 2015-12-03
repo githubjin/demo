@@ -4,9 +4,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.jboss.logging.MDC;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+/**
+ * 暂时未起作用，需要添加到RequestMappingHandlerMapping interceptors 中
+ * @author Yo
+ *
+ */
+@Component
 public class LogbackInterceptor extends HandlerInterceptorAdapter {
 	
 	private final static String CLIENT_ID = "ClientId";

@@ -7,7 +7,7 @@
 	<springProperty scope="local" name="logLevel" source="log.level"/>
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<pattern>%date %X{ClientId} [%thread] %-5level %logger{80} --- %msg%n
+			<pattern>%date [%X{ClientId}] [%thread] %-5level %logger{80} --- %msg%n
 			</pattern>
 		</encoder>
 	</appender>
