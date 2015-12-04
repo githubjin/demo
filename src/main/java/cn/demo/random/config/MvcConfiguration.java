@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import cn.demo.random.interceptor.LogbackInterceptor;
@@ -26,8 +27,17 @@ public class MvcConfiguration {
 			@Override
 			public void addInterceptors(InterceptorRegistry registry) {
 				super.addInterceptors(registry);
-				registry.addInterceptor(logbackInterceptor).addPathPatterns("/*");
+				registry.addInterceptor(logbackInterceptor).addPathPatterns("/api/*");
 				System.out.println("************************************Adding interceptors******************************************");
+			}
+
+			/**
+			 * custom static resource handler
+			 */
+			@Override
+			public void addResourceHandlers(ResourceHandlerRegistry registry) {
+				super.addResourceHandlers(registry);
+				registry.addResourceHandler("/*").addResourceLocations("classpath:/public/");
 			}
 			
 		};

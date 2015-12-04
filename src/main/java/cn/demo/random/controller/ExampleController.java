@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.jmx.export.annotation.ManagedResource;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ import cn.demo.random.config.ConfigurationPropertiesDemo;
 
 @ManagedResource(objectName="random:name=ExampleController")
 @RestController
+@RequestMapping("/api")
 public class ExampleController{
 
 	@Autowired
@@ -34,6 +36,7 @@ public class ExampleController{
         return "---------" + text + "---------- demo.getServer():" + demo.getServer();
     }
     
+    @CrossOrigin
     @RequestMapping("/{name}")
     public String random(@PathVariable String name){
         return "hello " + name;
