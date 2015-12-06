@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java/cn/demo/random/config/SecurityConfiguration.java=UTF-8
+encoding//src/main/java/cn/demo/random/rbac=UTF-8
+encoding//src/main/java/cn/demo/random/rbac/entity=UTF-8
+encoding//src/main/java/cn/demo/random/rbac/entity/RbacMenu.java=UTF-8
+encoding//src/main/java/cn/demo/random/rbac/repository=UTF-8
 encoding//src/main/resources/application.properties=UTF-8
 encoding//src/main/resources/mail.properties=UTF-8
+encoding/liquibase.gradle=UTF-8

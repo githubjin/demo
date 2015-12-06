@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.demo.random.config.ConfigurationPropertiesDemo;
+import cn.demo.random.config.AppProperties;
 
 @ManagedResource(objectName="random:name=ExampleController")
 @RestController
@@ -24,16 +24,16 @@ public class ExampleController{
 	private ApplicationArguments applicationArguments;
 	
 	@Autowired
-	private ConfigurationPropertiesDemo demo;
+	private AppProperties demo;
 	
 	@Value(value = "${app.mail.server}")
 	private String text;
 	@Value("${random.value}--${random.int}--${random.long}--${random.int(10)}--${random.int[1024,65536]}")
 	private String randoms;
 	
-    @RequestMapping("/")
+    @RequestMapping
     public String home(){
-        return "---------" + text + "---------- demo.getServer():" + demo.getServer();
+        return "---------" + text + "---------- demo.getServer():" + demo.getJwt().getHmacKey();
     }
     
     @CrossOrigin
