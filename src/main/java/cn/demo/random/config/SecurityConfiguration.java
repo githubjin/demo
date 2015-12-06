@@ -17,10 +17,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.data.repository.query.SecurityEvaluationContextExtension;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import cn.demo.random.security.JwtConfigurer;
-import cn.demo.random.security.JwtFilter;
 import cn.demo.random.security.TokenProvider;
 
 /**
@@ -73,11 +71,6 @@ public class SecurityConfiguration {
 	public WebSecurityConfigurerAdapter applicationSecurityConfiguration(){
 		return new WebSecurityConfigurerAdapter(){
 
-			@Override
-			protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-				super.configure(auth);
-			}
-
 //			@Override
 //			public void configure(WebSecurity web) throws Exception {
 //				web.ignoring()
@@ -91,7 +84,6 @@ public class SecurityConfiguration {
 
 			@Override
 			protected void configure(HttpSecurity http) throws Exception {
-				JwtFilter customFilter = new JwtFilter(userDetailsService, tokenProvider);
 				http
 					.csrf()
 					.disable()
@@ -109,7 +101,7 @@ public class SecurityConfiguration {
 							object.setSecurityMetadataSource(urlFilterInvocationSecurityMetadataSource);
 							return object;
 						}
-					})
+					}).and().authorizeRequests().anyRequest().permitAll()
 				.and()
 					.apply(securityConfigurerAdapter());
 			}
