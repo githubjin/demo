@@ -20,6 +20,7 @@ import static cn.demo.random.jwt.JwtSpecData.N;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.jwt.Jwt;
 import org.springframework.security.jwt.JwtHelper;
 import org.springframework.security.jwt.crypto.sign.InvalidSignatureException;
@@ -92,5 +93,7 @@ public class JwtTests {
 	public void rsaVerificationIsInverseOfSigning() {
 		Jwt jwt = JwtHelper.encode(JOE_CLAIM_SEGMENT, new RsaSigner(N, E));
 		jwt.verifySignature(new RsaVerifier(N, D));
+		
+		System.out.println(new BCryptPasswordEncoder().encode("admin"));
 	}
 }
