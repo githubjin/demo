@@ -26,7 +26,7 @@ public class ExampleController{
 	@Autowired
 	private AppProperties demo;
 	
-	@Value(value = "${app.mail.server}")
+	@Value(value = "${appx.mail.server}")
 	private String text;
 	@Value("${random.value}--${random.int}--${random.long}--${random.int(10)}--${random.int[1024,65536]}")
 	private String randoms;

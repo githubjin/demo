@@ -1,27 +1,27 @@
 configurations {
-  liquibase
+  yu
 }
 
 dependencies {
-  liquibase group: 'org.liquibase.ext', name: 'liquibase-hibernate4', version: liquibase_hibernate4_version
+  yu group: 'org.liquibase.ext', name: 'liquibase-hibernate4', version: liquibase_hibernate4_version
 }
 
+
 task liquibaseDiffChangelog(dependsOn: compileJava, type: JavaExec) {
-  group = "liquibase"
+  group = "yu"
 
   classpath sourceSets.main.runtimeClasspath
-  classpath configurations.liquibase
+  classpath configurations.yu
   main = "liquibase.integration.commandline.Main"
 
-  args "--changeLogFile=src/main/resources/config/liquibase/changelog/" + buildTimestamp() +"_changelog.xml"
-  args "--referenceUrl=hibernate:spring:com.mycompany.myapp.domain?dialect=org.hibernate.dialect.MySQLInnoDBDialect"
+  args "--changeLogFile=src/main/resources/db/liquibase/changelog/"+buildTimestamp()+"_changelog.xml"
+  args "--referenceUrl=hibernate:spring:cn.demo.random.rbac.entity?dialect=org.hibernate.dialect.MySQLInnoDBDialect"
   args "--username=root"
   args "--password="
-  args "--url=jdbc:mysql://localhost:3306/jhipster"
+  args "--url=jdbc:mysql://localhost:3306/demodb"
   args "--driver=com.mysql.jdbc.Driver"
   args "diffChangeLog"
   
-
 }
 
 def buildTimestamp() {
@@ -29,3 +29,49 @@ def buildTimestamp() {
   def formattedDate = date.format('yyyyMMddHHmmss')
   return formattedDate
 }
+
+
+/*
+def liquibaseDependencesLibs = ['mysql-connector-java', 'liquibase-core']
+plugins {
+  id 'org.liquibase.gradle' version '1.2.0'
+}
+liquibase {
+	group = "yu"
+	classpath sourceSets.main.runtimeClasspath.getAsPath()
+  	classpath configurations.yu.getAsPath()
+	activities {
+		main {
+			changeLogFile 'src/main/resources/db/liquibase/changelog/' + System.currentTimeMillis() + '_changelog.xml'
+			referenceUrl 'hibernate:spring:cn.demo.random.rbac.entity?dialect=org.hibernate.dialect.MySQL5Dialect'
+			url 'jdbc:mysql://localhost:3306/demodb'
+			username 'root'
+			password ''
+			driver 'com.mysql.jdbc.Driver'
+			logLevel 'DEBUG'
+		}
+	}
+	runList = 'main'
+}
+
+task echoRuntimeClasspath << {
+	println sourceSets.main.runtimeClasspath.filter({file -> 
+		for(String fn : liquibaseDependencesLibs){
+			if(file.getName().indexOf(fn) > -1){
+				println "${fn}--------------------- true"
+				return true;
+			}else{
+				continue;
+			}
+		}
+		return false;
+	}).getAsPath()
+}
+
+
+def buildTimestamp() {
+  def date = new Date()
+  def formattedDate = date.format('yyyyMMddHHmmss')
+  return formattedDate
+}
+*/
