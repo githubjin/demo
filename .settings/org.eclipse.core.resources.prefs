@@ -6,4 +6,5 @@ encoding//src/main/java/cn/demo/random/rbac/entity/RbacMenu.java=UTF-8
 encoding//src/main/java/cn/demo/random/rbac/repository=UTF-8
 encoding//src/main/resources/application.properties=UTF-8
 encoding//src/main/resources/mail.properties=UTF-8
+encoding/gradle.properties=UTF-8
 encoding/liquibase.gradle=UTF-8
