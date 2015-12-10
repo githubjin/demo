@@ -21,7 +21,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "rbac_user")
 public class RbacUser extends BaseEntityClass{
 
-    @Id
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+    @Column(name="user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     @Column(name = "user_name", length = 30)

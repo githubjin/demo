@@ -18,7 +18,9 @@ import javax.validation.constraints.NotNull;
 @Table(name = "rbac_permission")
 public class RbacPermission extends BaseEntityClass {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+	@Id
+	@Column(name = "ps_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long psId;
     @Column(name = "role_id")

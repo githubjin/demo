@@ -54,12 +54,21 @@ dependencies {
     compile("com.mattbertolini:liquibase-slf4j:${liquibase_slf4j_version}")
     compile("mysql:mysql-connector-java")
     
+    compile("com.zaxxer:HikariCP")
+    
     compile("com.fasterxml.jackson.datatype:jackson-datatype-hibernate4")
     compile("com.fasterxml.jackson.core:jackson-core")
     compile("com.fasterxml.jackson.core:jackson-databind")
     compile("com.fasterxml.jackson.core:jackson-annotations")
     
-    
+    compile("io.dropwizard.metrics:metrics-core")
+	compile("io.dropwizard.metrics:metrics-graphite")
+	compile("io.dropwizard.metrics:metrics-annotation:${dropwizard_metrics_version}")
+	compile("io.dropwizard.metrics:metrics-healthchecks:${dropwizard_metrics_version}")
+	compile("io.dropwizard.metrics:metrics-jvm:${dropwizard_metrics_version}")
+	
+	compile("com.ryantenney.metrics:metrics-spring:${metrics_spring_version}")
+	    
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("com.mattbertolini:liquibase-slf4j:${liquibase_slf4j_version}")
     
@@ -67,4 +76,8 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.9'
+}
+
+task echoProjectProperties << {
+	println project.projectDir
 }

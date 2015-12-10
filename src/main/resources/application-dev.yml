@@ -1,0 +1,61 @@
+##
+# spring devtools
+##
+spring:
+    devtools:
+        restart:
+            enabled: true
+        livereload:
+            enabled: true
+    datasource:
+        driver-class-name: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+        url: jdbc:mysql://localhost:3306/demodb?useUnicode=true&characterEncoding=utf8
+        name: 
+        username: root
+        password: 
+##
+# listener
+##
+context:
+    listener:
+        classes: cn.demo.random.event.ContextReloadListener
+##
+# liquibase configuration
+##
+liquibase:
+    contexts: dev
+
+####################################################################################
+#                                 custom configurations                            #
+####################################################################################
+
+##
+# loging configuration
+##
+log:
+    path: D:/logs
+    file: demo-dev
+    level: DUBUG
+
+##
+# JWT HMAC_KEY
+##
+app:
+    jwt:
+        hmac-key: god
+        tokenValidityInSeconds: 1800
+        issuer: demo-dev
+    datasource:
+        serverName: 
+        cachePrepStmts: true
+        preStmtCacheSize: 250
+        preStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+    metrics:
+        jmx:
+            enabled: true
+        graphite:
+            enabled: false
+            host: localhost
+            port: 2003
+            prefix: yoman

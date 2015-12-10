@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="Yo (generated)" id="1449722766077-1">
+        <createTable tableName="rbac_menu">
+            <column autoIncrement="true" name="menu_id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="rbac_menuPK"/>
+            </column>
+            <column name="commonts" type="VARCHAR(100)"/>
+            <column name="create_date" type="date"/>
+            <column name="creator" type="BIGINT"/>
+            <column name="isvalid" type="VARCHAR(1)"/>
+            <column name="menu_icon" type="VARCHAR(100)"/>
+            <column name="nemu_name" type="VARCHAR(30)"/>
+            <column name="menu_url" type="VARCHAR(100)"/>
+            <column name="role_id" type="BIGINT"/>
+            <column name="upper_menu" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Yo (generated)" id="1449722766077-2">
+        <createTable tableName="rbac_permission">
+            <column autoIncrement="true" name="ps_id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="rbac_permissionPK"/>
+            </column>
+            <column name="commonts" type="VARCHAR(100)"/>
+            <column name="create_date" type="date"/>
+            <column name="creator" type="BIGINT"/>
+            <column name="isvalid" type="VARCHAR(1)"/>
+            <column name="ps_description" type="VARCHAR(100)"/>
+            <column name="ps_group" type="VARCHAR(30)"/>
+            <column name="ps_name" type="VARCHAR(30)"/>
+            <column name="ps_type" type="VARCHAR(1)"/>
+            <column name="ps_url" type="VARCHAR(100)"/>
+            <column name="role_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Yo (generated)" id="1449722766077-3">
+        <createTable tableName="rbac_role">
+            <column autoIncrement="true" name="role_id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="rbac_rolePK"/>
+            </column>
+            <column name="commonts" type="VARCHAR(100)"/>
+            <column name="create_date" type="date"/>
+            <column name="creator" type="BIGINT"/>
+            <column name="isvalid" type="VARCHAR(1)"/>
+            <column name="main_page" type="VARCHAR(100)"/>
+            <column name="role_description" type="VARCHAR(100)"/>
+            <column name="role_name" type="VARCHAR(30)"/>
+            <column name="upper_role_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Yo (generated)" id="1449722766077-4">
+        <createTable tableName="rbac_user">
+            <column autoIncrement="true" name="user_id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="rbac_userPK"/>
+            </column>
+            <column name="commonts" type="VARCHAR(100)"/>
+            <column name="create_date" type="date"/>
+            <column name="creator" type="BIGINT"/>
+            <column name="isvalid" type="VARCHAR(1)"/>
+            <column name="activated" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="activation_key" type="VARCHAR(20)"/>
+            <column name="email" type="VARCHAR(30)"/>
+            <column name="lang_key" type="VARCHAR(5)"/>
+            <column name="real_name" type="VARCHAR(30)"/>
+            <column name="reset_date" type="datetime"/>
+            <column name="reset_key" type="VARCHAR(20)"/>
+            <column name="tel" type="VARCHAR(20)"/>
+            <column name="user_name" type="VARCHAR(30)"/>
+            <column name="user_pwd" type="VARCHAR(60)"/>
+            <column name="validate_date" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Yo (generated)" id="1449722766077-5">
+        <createTable tableName="rbac_user_role">
+            <column autoIncrement="true" name="rid" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="rbac_user_rolePK"/>
+            </column>
+            <column name="commonts" type="VARCHAR(100)"/>
+            <column name="create_date" type="date"/>
+            <column name="creator" type="BIGINT"/>
+            <column name="isvalid" type="VARCHAR(1)"/>
+            <column name="role_id" type="BIGINT"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

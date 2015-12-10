@@ -1,5 +1,7 @@
 package cn.demo.random.config;
 
+import java.util.Arrays;
+
 import javax.sql.DataSource;
 
 import org.slf4j.Logger;
@@ -7,12 +9,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
+import org.springframework.context.ApplicationContextException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.util.StringUtils;
 
+import com.codahale.metrics.MetricRegistry;
 import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 import cn.demo.random.config.liquibase.AsyncSpringLiquibase;
 import liquibase.integration.spring.SpringLiquibase;
@@ -27,6 +35,47 @@ public class DatabaseConfiguration {
 	private AppProperties appproperties;
 	@Autowired
 	private Environment env;
+	
+	@Autowired(required = false)
+	private MetricRegistry metricRegistry;
+	
+	@Bean
+	@Profile(Constants.SPRING_PROFILE_DEVELOPMENT)
+	public DataSource datasource(DataSourceProperties dataSourceProperties, AppProperties appProperties){
+		logger.debug("-------------------Configurer Datasource-------------------");
+		String databaseName = env.getProperty("spring.datasource.name");
+		if(StringUtils.isEmpty(dataSourceProperties.getUrl()) && StringUtils.isEmpty(databaseName)){
+			logger.error("Your database connection poll configuration is incorrect ! The application"
+					+ " cannot start. Please check your Spring profile,current profiles are: {}",
+					Arrays.toString(env.getActiveProfiles()));
+			throw new ApplicationContextException("Database connection pool is not configured correctly");
+		}
+		HikariConfig config = new HikariConfig();
+		config.setDataSourceClassName(dataSourceProperties.getDriverClassName());
+		if(StringUtils.isEmpty(dataSourceProperties.getUrl())){
+			config.addDataSourceProperty("databaseName", databaseName);
+			config.addDataSourceProperty("serverName", appProperties.getDatasource().getServerName());
+		}else{
+			config.addDataSourceProperty("url", dataSourceProperties.getUrl());
+		}
+		if(dataSourceProperties.getUsername() != null) {
+			config.addDataSourceProperty("user", dataSourceProperties.getUsername());
+		}else{
+			config.addDataSourceProperty("user", "");
+		}
+		if(dataSourceProperties.getPassword() != null){
+			config.addDataSourceProperty("password", dataSourceProperties.getPassword());
+		}else{
+			config.addDataSourceProperty("password", "");
+		}
+		//Mysql optimizations, see https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration
+		if("com.mysql.jdbc.jdbc2.optional.MysqlDataSource".equals(dataSourceProperties.getDriverClassName())) {
+			config.addDataSourceProperty("cachePrepStmts", appProperties.getDatasource().isCachePrepStmts());
+			config.addDataSourceProperty("prepStmtCacheSize", appProperties.getDatasource().getPreStmtCacheSize());
+			config.addDataSourceProperty("prepStmtCacheSqlLimit", appProperties.getDatasource().getPreStmtCacheSqlLimit());
+		}
+		return new HikariDataSource(config);
+	}
 
 	@Bean
 	public SpringLiquibase liquibase(DataSource dataSource, DataSourceProperties dataSourceProperties,

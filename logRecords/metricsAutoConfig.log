@@ -1,0 +1,447 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.0.RELEASE)
+
+2015-12-10 12:46:24,478 [] [pool-1-thread-1] INFO  org.hibernate.validator.internal.util.Version --- HV000001: Hibernate Validator 5.2.2.Final
+2015-12-10 12:46:24,504 [] [restartedMain] INFO  cn.demo.random.Application --- Starting Application on DESKTOP-SHPMCJ7 with PID 11832 (I:\sts-bus\demo\bin started by Yo in I:\sts-bus\demo)
+2015-12-10 12:46:24,504 [] [restartedMain] DEBUG cn.demo.random.Application --- Running with Spring Boot v1.3.0.RELEASE, Spring v4.2.3.RELEASE
+2015-12-10 12:46:24,504 [] [restartedMain] INFO  cn.demo.random.Application --- The following profiles are active: dev
+2015-12-10 12:46:24,532 [] [restartedMain] INFO  o.s.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext --- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e19213e: startup date [Thu Dec 10 12:46:24 CST 2015]; root of context hierarchy
+2015-12-10 12:46:25,602 [] [restartedMain] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory --- Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2015-12-10 12:46:25,629 [] [restartedMain] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory --- Overriding bean definition for bean 'ignoredPathsWebSecurityConfigurerAdapter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/SpringBootWebSecurityConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/ManagementWebSecurityAutoConfiguration.class]]
+2015-12-10 12:46:26,182 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'app.CONFIGURATION_PROPERTIES' of type [class cn.demo.random.config.AppProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,183 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'asyncConfiguration' of type [class cn.demo.random.config.AsyncConfiguration$$EnhancerBySpringCGLIB$$519d029b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,191 [] [restartedMain] DEBUG cn.demo.random.config.AsyncConfiguration --- Creating Async Task Executor
+2015-12-10 12:46:26,197 [] [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor --- Initializing ExecutorService 
+2015-12-10 12:46:26,197 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'taskExecutor' of type [class cn.demo.random.async.ExceptionHandlingAsyncTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,280 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [class org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$2d583fad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,393 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'objectPostProcessor' of type [class org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,397 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@17915ae0' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,407 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [class org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$e036741f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,427 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'methodSecurityMetadataSource' of type [class org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,433 [] [restartedMain] INFO  o.s.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker --- Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$436f6b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-12-10 12:46:26,784 [] [restartedMain] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer --- Tomcat initialized with port(s): 8080 (http)
+2015-12-10 12:46:26,798 [] [restartedMain] INFO  org.apache.catalina.core.StandardService --- Starting service Tomcat
+2015-12-10 12:46:26,799 [] [restartedMain] INFO  org.apache.catalina.core.StandardEngine --- Starting Servlet Engine: Apache Tomcat/8.0.28
+2015-12-10 12:46:26,974 [] [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+2015-12-10 12:46:26,974 [] [localhost-startStop-1] INFO  org.springframework.web.context.ContextLoader --- Root WebApplicationContext: initialization completed in 2443 ms
+2015-12-10 12:46:27,713 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.FilterRegistrationBean --- Mapping filter: 'metricFilter' to: [/*]
+2015-12-10 12:46:27,713 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.FilterRegistrationBean --- Mapping filter: 'characterEncodingFilter' to: [/*]
+2015-12-10 12:46:27,714 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.FilterRegistrationBean --- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2015-12-10 12:46:27,714 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.FilterRegistrationBean --- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2015-12-10 12:46:27,714 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.FilterRegistrationBean --- Mapping filter: 'requestContextFilter' to: [/*]
+2015-12-10 12:46:27,715 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.DelegatingFilterProxyRegistrationBean --- Mapping filter: 'springSecurityFilterChain' to: [/*]
+2015-12-10 12:46:27,715 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.FilterRegistrationBean --- Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2015-12-10 12:46:27,715 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.FilterRegistrationBean --- Mapping filter: 'applicationContextIdFilter' to: [/*]
+2015-12-10 12:46:27,715 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.ServletRegistrationBean --- Mapping servlet: 'dispatcherServlet' to [/]
+2015-12-10 12:46:27,717 [] [localhost-startStop-1] INFO  org.springframework.boot.context.embedded.ServletRegistrationBean --- Mapping servlet: 'webServlet' to [/h2-console/*]
+2015-12-10 12:46:27,859 [] [localhost-startStop-1] DEBUG cn.demo.random.config.DatabaseConfiguration --- -------------------Configurer Datasource-------------------
+2015-12-10 12:46:27,861 [] [localhost-startStop-1] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-0 - is starting.
+2015-12-10 12:46:28,275 [] [localhost-startStop-1] DEBUG cn.demo.random.config.DatabaseConfiguration --- Configuring Liquibase.
+2015-12-10 12:46:28,284 [] [yo-ransom-Executor-1] WARN  cn.demo.random.config.liquibase.AsyncSpringLiquibase --- Starting Liquibase asynchronously, your databse might not be ready at startup!
+2015-12-10 12:46:28,392 [] [localhost-startStop-1] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean --- Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-12-10 12:46:28,406 [] [localhost-startStop-1] INFO  org.hibernate.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-12-10 12:46:28,413 [] [yo-ransom-Executor-1] INFO  liquibase --- Successfully acquired change log lock
+2015-12-10 12:46:28,503 [] [localhost-startStop-1] INFO  org.hibernate.Version --- HHH000412: Hibernate Core {4.3.11.Final}
+2015-12-10 12:46:28,507 [] [localhost-startStop-1] INFO  org.hibernate.cfg.Environment --- HHH000206: hibernate.properties not found
+2015-12-10 12:46:28,511 [] [localhost-startStop-1] INFO  org.hibernate.cfg.Environment --- HHH000021: Bytecode provider name : javassist
+2015-12-10 12:46:28,834 [] [localhost-startStop-1] INFO  org.hibernate.annotations.common.Version --- HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-12-10 12:46:28,904 [] [localhost-startStop-1] INFO  org.hibernate.dialect.Dialect --- HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-12-10 12:46:29,040 [] [localhost-startStop-1] INFO  org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory --- HHH000397: Using ASTQueryTranslatorFactory
+2015-12-10 12:46:29,151 [] [yo-ransom-Executor-1] INFO  liquibase --- Creating database history table with name: demodb.DATABASECHANGELOG
+2015-12-10 12:46:29,175 [] [yo-ransom-Executor-1] INFO  liquibase --- Reading from demodb.DATABASECHANGELOG
+2015-12-10 12:46:29,213 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-1::Yo (generated): Table rbac_menu created
+2015-12-10 12:46:29,214 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-1::Yo (generated): ChangeSet classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-1::Yo (generated) ran successfully in 27ms
+2015-12-10 12:46:29,236 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-2::Yo (generated): Table rbac_permission created
+2015-12-10 12:46:29,237 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-2::Yo (generated): ChangeSet classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-2::Yo (generated) ran successfully in 14ms
+2015-12-10 12:46:29,271 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-3::Yo (generated): Table rbac_role created
+2015-12-10 12:46:29,272 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-3::Yo (generated): ChangeSet classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-3::Yo (generated) ran successfully in 30ms
+2015-12-10 12:46:29,295 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-4::Yo (generated): Table rbac_user created
+2015-12-10 12:46:29,296 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-4::Yo (generated): ChangeSet classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-4::Yo (generated) ran successfully in 20ms
+2015-12-10 12:46:29,322 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-5::Yo (generated): Table rbac_user_role created
+2015-12-10 12:46:29,323 [] [yo-ransom-Executor-1] INFO  liquibase --- classpath:db/liquibase/master.xml: classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-5::Yo (generated): ChangeSet classpath:db/liquibase/changelog/20151210124601_changelog.xml::1449722766077-5::Yo (generated) ran successfully in 24ms
+2015-12-10 12:46:29,326 [] [yo-ransom-Executor-1] INFO  liquibase --- Successfully released change log lock
+2015-12-10 12:46:29,327 [] [yo-ransom-Executor-1] DEBUG cn.demo.random.config.liquibase.AsyncSpringLiquibase --- Started Liquibase in 1042 ms
+2015-12-10 12:46:29,703 [] [localhost-startStop-1] INFO  cn.demo.random.rbac.UrlFilterInvocationSecurityMetadataSource --- resources with role {}
+2015-12-10 12:46:30,405 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2015-12-10 12:46:30,406 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,406 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,406 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/liquibase || /liquibase.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,407 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,407 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2015-12-10 12:46:30,408 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,408 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,410 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,411 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2015-12-10 12:46:30,411 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,411 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,412 [] [localhost-startStop-1] INFO  org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping --- Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-12-10 12:46:30,572 [] [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain --- Creating filter chain: Ant [pattern='/css/**'], []
+2015-12-10 12:46:30,572 [] [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain --- Creating filter chain: Ant [pattern='/js/**'], []
+2015-12-10 12:46:30,572 [] [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain --- Creating filter chain: Ant [pattern='/images/**'], []
+2015-12-10 12:46:30,573 [] [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain --- Creating filter chain: Ant [pattern='/**/favicon.ico'], []
+2015-12-10 12:46:30,573 [] [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain --- Creating filter chain: Ant [pattern='/error'], []
+2015-12-10 12:46:30,661 [] [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain --- Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18f23e89, org.springframework.security.web.context.SecurityContextPersistenceFilter@53813b6e, org.springframework.security.web.header.HeaderWriterFilter@61626756, org.springframework.security.web.authentication.logout.LogoutFilter@36192e04, cn.demo.random.security.JwtFilter@2b416b84, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cfa5f1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7cf802a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@174f6a4e, org.springframework.security.web.session.SessionManagementFilter@6431f20b, org.springframework.security.web.access.ExceptionTranslationFilter@56ee57f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d1164c]
+2015-12-10 12:46:30,679 [] [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain --- Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$ManagementWebSecurityConfigurerAdapter$EndpointPathRequestMatcher@76d4161f, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36128fe4, org.springframework.security.web.context.SecurityContextPersistenceFilter@6edbce74, org.springframework.security.web.header.HeaderWriterFilter@4a169c0, org.springframework.security.web.authentication.logout.LogoutFilter@19782c44, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@190f7d17, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ea90e5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31498f21, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23f5d8e5, org.springframework.security.web.session.SessionManagementFilter@59fe3cf0, org.springframework.security.web.access.ExceptionTranslationFilter@1a071d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b6f93af]
+2015-12-10 12:46:30,692 [] [localhost-startStop-1] INFO  org.springframework.security.web.DefaultSecurityFilterChain --- Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@68ea9d0e, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68a03886, org.springframework.security.web.context.SecurityContextPersistenceFilter@55681d32, org.springframework.security.web.header.HeaderWriterFilter@4f398d80, org.springframework.security.web.csrf.CsrfFilter@23e05337, org.springframework.security.web.authentication.logout.LogoutFilter@7d7e8e1e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e19ca67, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d4f0ba9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d077478, org.springframework.security.web.session.SessionManagementFilter@5c2d8583, org.springframework.security.web.access.ExceptionTranslationFilter@39944fcf]
+2015-12-10 12:46:30,935 [] [restartedMain] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter --- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e19213e: startup date [Thu Dec 10 12:46:24 CST 2015]; root of context hierarchy
+************************************Adding interceptors******************************************
+2015-12-10 12:46:31,251 [] [restartedMain] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/api/{name}]}" onto public java.lang.String cn.demo.random.controller.ExampleController.random(java.lang.String)
+2015-12-10 12:46:31,254 [] [restartedMain] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/api/arguments]}" onto public java.util.List<java.lang.String> cn.demo.random.controller.ExampleController.applicatinArguments()
+2015-12-10 12:46:31,254 [] [restartedMain] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/api]}" onto public java.lang.String cn.demo.random.controller.ExampleController.home()
+2015-12-10 12:46:31,254 [] [restartedMain] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/api/randoms]}" onto public java.lang.String cn.demo.random.controller.ExampleController.randomValues()
+2015-12-10 12:46:31,258 [] [restartedMain] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-12-10 12:46:31,258 [] [restartedMain] INFO  o.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping --- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2015-12-10 12:46:31,269 [] [restartedMain] INFO  org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter --- Adding welcome page: class path resource [public/index.html]
+2015-12-10 12:46:31,287 [] [restartedMain] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2015-12-10 12:46:31,304 [] [restartedMain] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Default mapping to handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-12-10 12:46:31,305 [] [restartedMain] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-12-10 12:46:31,305 [] [restartedMain] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-12-10 12:46:31,366 [] [restartedMain] INFO  org.springframework.web.servlet.handler.SimpleUrlHandlerMapping --- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-12-10 12:46:31,767 [] [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer --- LiveReload server is running on port 35729
+2015-12-10 12:46:31,804 [] [restartedMain] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Registering beans for JMX exposure on startup
+2015-12-10 12:46:31,806 [] [restartedMain] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'datasource' has been autodetected for JMX exposure
+2015-12-10 12:46:31,814 [] [restartedMain] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Bean with name 'exampleController' has been autodetected for JMX exposure
+2015-12-10 12:46:31,819 [] [restartedMain] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located managed bean 'exampleController': registering with JMX server as MBean [random:name=ExampleController]
+2015-12-10 12:46:31,833 [] [restartedMain] INFO  org.springframework.jmx.export.annotation.AnnotationMBeanExporter --- Located MBean 'datasource': registering with JMX server as MBean [com.zaxxer.hikari:name=datasource,type=HikariDataSource]
+2015-12-10 12:46:31,834 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Registering beans for JMX exposure on startup
+2015-12-10 12:46:31,839 [] [restartedMain] INFO  org.springframework.context.support.DefaultLifecycleProcessor --- Starting beans in phase 0
+2015-12-10 12:46:31,842 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2015-12-10 12:46:31,851 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'liquibaseEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=liquibaseEndpoint]
+2015-12-10 12:46:31,854 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2015-12-10 12:46:31,858 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2015-12-10 12:46:31,862 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2015-12-10 12:46:31,865 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2015-12-10 12:46:31,877 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2015-12-10 12:46:31,881 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2015-12-10 12:46:31,885 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2015-12-10 12:46:31,887 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+2015-12-10 12:46:31,889 [] [restartedMain] INFO  org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter --- Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2015-12-10 12:46:31,892 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- ##------------------------------ContextRefreshedEvent---------------------------
+2015-12-10 12:46:31,892 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+2015-12-10 12:46:31,892 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+2015-12-10 12:46:31,892 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.internalRequiredAnnotationProcessor
+2015-12-10 12:46:31,892 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.internalCommonAnnotationProcessor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.internalPersistenceAnnotationProcessor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.event.internalEventListenerProcessor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.event.internalEventListenerFactory
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: application
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: controllerLogger
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: disposableBeanImp
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: asyncConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: databaseConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mailConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: securityConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: exampleController
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: logbackInterceptor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: urlFilterInvocationSecurityMetadataSource
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: userDetailService
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: applicationRunnerImp
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: commandLineRunnerImp
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: tokenProvider
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.scheduling.annotation.ProxyAsyncConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.internalAsyncAnnotationProcessor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.scheduling.annotation.SchedulingConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.context.annotation.internalScheduledAnnotationProcessor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: taskExecutor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.transaction.config.internalTransactionAdvisor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: transactionAttributeSource
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: transactionInterceptor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.transaction.config.internalTransactionalEventListenerFactory
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: datasource
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: liquibase
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: hibernate4Module
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.aop.config.internalAutoProxyCreator
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: webMvcConfigurationAdapter
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: authenticationManagerBuilder
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: enableGlobalAuthenticationAutowiredConfigurer
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: methodSecurityInterceptor
+2015-12-10 12:46:31,893 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: methodSecurityMetadataSource
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: preInvocationAuthorizationAdvice
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: objectPostProcessor
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: passwordEncoder
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: applicationSecurityConfiguration
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: securityEvaluationContextExtension
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: metaDataSourceAdvisor
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.AutoConfigurationPackages
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: app.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: liquibase.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: propertySourcesPlaceholderConfigurer
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$TomcatWebSocketConfiguration
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: websocketContainerCustomizer
+2015-12-10 12:46:31,894 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: tomcatEmbeddedServletContainerFactory
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: embeddedServletContainerCustomizerBeanPostProcessor
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dispatcherServlet
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dispatcherServletRegistration
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.mvc.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: error
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: beanNameViewResolver
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: errorAttributes
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: basicErrorController
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: errorPageCustomizer
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: preserveErrorControllerTargetClassPostProcessor
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: requestMappingHandlerAdapter
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: requestMappingHandlerMapping
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcContentNegotiationManager
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: viewControllerHandlerMapping
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: beanNameHandlerMapping
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: resourceHandlerMapping
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcResourceUrlProvider
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: defaultServletHandlerMapping
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcConversionService
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcValidator
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcPathMatcher
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcUrlPathHelper
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcUriComponentsContributor
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: httpRequestHandlerAdapter
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: simpleControllerHandlerAdapter
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: handlerExceptionResolver
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcViewResolver
+2015-12-10 12:46:31,895 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: faviconHandlerMapping
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: faviconRequestHandler
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: defaultViewResolver
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: requestContextFilter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: viewResolver
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.resources.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: hiddenHttpMethodFilter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: httpPutFormContentFilter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: auditEventRepository
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: auditListener
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: authenticationAuditListener
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: authorizationAuditListener
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: delegatingApplicationListener
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: webSecurityExpressionHandler
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: springSecurityFilterChain
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: privilegeEvaluator
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: autowiredWebSecurityConfigurersIgnoreParents
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: requestDataValueProcessor
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: ignoredPathsWebSecurityConfigurerAdapter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.security.AuthenticationManagerConfiguration$AuthenticationManagerConfigurationListener
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.security.AuthenticationManagerConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: authenticationManager
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: springBootAuthenticationConfigurerAdapter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.security.BootGlobalAuthenticationConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: bootGlobalAuthenticationConfigurationAdapter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.security.SecurityDataConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: authenticationEventPublisher
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: securityProperties
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$ManagementWebSecurityConfigurerAdapter
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$ManagementSecurityPropertiesConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.jta.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$JdbcTemplateConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: jdbcTemplate
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: namedParameterJdbcTemplate
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$DataSourceInitializerConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dataSourceInitializer
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: hikariPoolDataSourceMetadataProvider
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: tomcatPoolDataSourceMetadataProvider
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+2015-12-10 12:46:31,896 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+2015-12-10 12:46:31,897 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.datasource.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,897 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dataSourceInitializerPostProcessor
+2015-12-10 12:46:31,897 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration
+2015-12-10 12:46:31,897 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: openEntityManagerInViewInterceptor
+2015-12-10 12:46:31,897 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration
+2015-12-10 12:46:31,897 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+2015-12-10 12:46:31,897 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: transactionManager
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: jpaVendorAdapter
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: entityManagerFactoryBuilder
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: entityManagerFactory
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.jpa.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dataSourceInitializedPublisher
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration$LiquibaseJpaDependencyConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DiskSpaceHealthIndicatorConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: diskSpaceHealthIndicator
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: diskSpaceHealthIndicatorProperties
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DataSourcesHealthIndicatorConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dbHealthIndicator
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: healthAggregator
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: management.health.status.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricsDropwizardAutoConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: metricRegistry
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dropwizardMetricServices
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dropwizardPublicMetrics
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mbeanExporter
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: objectNamingStrategy
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mbeanServer
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$TomcatMetricsConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: tomcatPublicMetrics
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$DataSourceMetricsConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dataSourcePublicMetrics
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: systemPublicMetrics
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: metricReaderPublicMetrics
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$InfoPropertiesConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: requestMappingEndpoint
+2015-12-10 12:46:31,898 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$LiquibaseEndpointConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: liquibaseEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: environmentEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: healthEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: beansEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: infoEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: metricsEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: traceEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: dumpEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: autoConfigurationReportEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: shutdownEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: configurationPropertiesReportEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: endpoints.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: endpointMBeanExporter
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: endpoints.jmx.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: serverProperties
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: duplicateServerPropertiesDetector
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: managementServerProperties
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: jacksonObjectMapperBuilder
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.jackson.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: jacksonObjectMapper
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: stringHttpMessageConverter
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.http.encoding.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mappingJackson2HttpMessageConverter
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: messageConverters
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: endpointHandlerMapping
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: mvcEndpoints
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: environmentMvcEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: healthMvcEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: metricsMvcEndpoint
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: endpoints.health.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: endpoints.cors.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$EndpointWebMvcConfiguration
+2015-12-10 12:46:31,899 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: applicationContextIdFilter
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: managementContextResolver
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: managementServletContext
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$MetricExportPropertiesConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.metrics.export.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: metricWritersMetricExporter
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: metricFilter
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: traceRepository
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: webRequestLoggingFilter
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: management.trace.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: springApplicationAdminRegistrar
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$JdkDynamicAutoProxyConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: persistenceExceptionTranslationPostProcessor
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: foo
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: jpaMappingContext
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: jpaContext
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: userRepository
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.data.web.config.SpringDataWebConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: pageableResolver
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: sortResolver
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.data.web.config.SpringDataJacksonConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: jacksonGeoModule
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: h2Console
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.h2.console.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: securityFilterChainRegistration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: transactionTemplate
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: characterEncodingFilter
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: multipartConfigElement
+2015-12-10 12:46:31,900 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: multipartResolver
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: multipart.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartConfiguration
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: classPathFileSystemWatcher
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: classPathRestartStrategy
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: hateoasObjenesisCacheDisabler
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: fileSystemWatcherFactory
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$LiveReloadConfiguration
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: liveReloadServer
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: optionalLiveReloadServer
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: spring.devtools.CONFIGURATION_PROPERTIES
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- #-----bean definition name: org.springframework.orm.jpa.SharedEntityManagerCreator#0
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- Environment property log.path : true
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- Environment property log.file : true
+2015-12-10 12:46:31,901 [] [restartedMain] INFO  cn.demo.random.event.ContextReloadListener --- Environment property log.level : true
+2015-12-10 12:46:31,927 [] [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+2015-12-10 12:46:31,933 [] [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+2015-12-10 12:46:31,946 [] [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool --- Using a shared selector for servlet write/read
+2015-12-10 12:46:31,960 [] [restartedMain] INFO  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer --- Tomcat started on port(s): 8080 (http)
+2015-12-10 12:46:31,964 [] [restartedMain] INFO  cn.demo.random.runner.ApplicationRunnerImp --- -------------------------Application started--------------------------args:org.springframework.boot.DefaultApplicationArguments@41008f40
+2015-12-10 12:46:31,965 [] [restartedMain] INFO  cn.demo.random.runner.CommandLineRunnerImp --- -------------------------CommandLineRunner: Application started--------------------------args:
+2015-12-10 12:46:31,965 [] [restartedMain] INFO  cn.demo.random.Application --- Started Application in 8.231 seconds (JVM running for 8.704)
+2015-12-10 13:40:55,881 [] [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] --- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2015-12-10 13:40:55,882 [] [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet --- FrameworkServlet 'dispatcherServlet': initialization started
+2015-12-10 13:40:55,942 [] [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet --- FrameworkServlet 'dispatcherServlet': initialization completed in 60 ms
+2015-12-10 13:40:55,998 [] [http-nio-8080-exec-1] INFO  cn.demo.random.rbac.UrlFilterInvocationSecurityMetadataSource --- URI on resource /liquibase -> []
+2015-12-10 13:41:01,729 [] [http-nio-8080-exec-2] INFO  cn.demo.random.rbac.UrlFilterInvocationSecurityMetadataSource --- URI on resource /cinfig -> []
+2015-12-10 13:41:01,783 [] [http-nio-8080-exec-2] INFO  cn.demo.random.aop.ControllerLogger --- --- error is invoked args:[org.apache.catalina.core.ApplicationHttpRequest@51402d9d] kind: method-execution- annotations:[@org.springframework.stereotype.Controller(value=), @org.springframework.web.bind.annotation.RequestMapping(path=[], headers=[], method=[], name=, produces=[], params=[], value=[${server.error.path:${error.path:/error}}], consumes=[])]--------------
+2015-12-10 13:41:05,265 [] [http-nio-8080-exec-3] INFO  cn.demo.random.rbac.UrlFilterInvocationSecurityMetadataSource --- URI on resource /config -> []
+2015-12-10 13:41:05,273 [] [http-nio-8080-exec-3] INFO  cn.demo.random.aop.ControllerLogger --- --- error is invoked args:[org.apache.catalina.core.ApplicationHttpRequest@2cd224ea] kind: method-execution- annotations:[@org.springframework.stereotype.Controller(value=), @org.springframework.web.bind.annotation.RequestMapping(path=[], headers=[], method=[], name=, produces=[], params=[], value=[${server.error.path:${error.path:/error}}], consumes=[])]--------------
+2015-12-10 13:41:08,714 [] [http-nio-8080-exec-4] INFO  cn.demo.random.rbac.UrlFilterInvocationSecurityMetadataSource --- URI on resource /configs -> []
+2015-12-10 13:41:08,721 [] [http-nio-8080-exec-4] INFO  cn.demo.random.aop.ControllerLogger --- --- error is invoked args:[org.apache.catalina.core.ApplicationHttpRequest@6107befd] kind: method-execution- annotations:[@org.springframework.stereotype.Controller(value=), @org.springframework.web.bind.annotation.RequestMapping(path=[], headers=[], method=[], name=, produces=[], params=[], value=[${server.error.path:${error.path:/error}}], consumes=[])]--------------
+2015-12-10 13:41:09,240 [] [http-nio-8080-exec-5] INFO  cn.demo.random.rbac.UrlFilterInvocationSecurityMetadataSource --- URI on resource /configs -> []
+2015-12-10 13:41:09,249 [] [http-nio-8080-exec-5] INFO  cn.demo.random.aop.ControllerLogger --- --- error is invoked args:[org.apache.catalina.core.ApplicationHttpRequest@68f7c304] kind: method-execution- annotations:[@org.springframework.stereotype.Controller(value=), @org.springframework.web.bind.annotation.RequestMapping(path=[], headers=[], method=[], name=, produces=[], params=[], value=[${server.error.path:${error.path:/error}}], consumes=[])]--------------

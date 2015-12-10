@@ -14,7 +14,7 @@ task liquibaseDiffChangelog(dependsOn: compileJava, type: JavaExec) {
   classpath configurations.yu
   main = "liquibase.integration.commandline.Main"
 
-  args "--changeLogFile=src/main/resources/db/liquibase/changelog/"+buildTimestamp()+"_changelog.xml"
+  args "--changeLogFile=" + project.projectDir + "/src/main/resources/db/liquibase/changelog/"+buildTimestamp()+"_changelog.xml"
   args "--referenceUrl=hibernate:spring:cn.demo.random.rbac.entity?dialect=org.hibernate.dialect.MySQLInnoDBDialect"
   args "--username=root"
   args "--password="
@@ -42,7 +42,7 @@ liquibase {
   	classpath configurations.yu.getAsPath()
 	activities {
 		main {
-			changeLogFile 'src/main/resources/db/liquibase/changelog/' + System.currentTimeMillis() + '_changelog.xml'
+			changeLogFile project.projectDir + '/src/main/resources/db/liquibase/changelog/' + System.currentTimeMillis() + '_changelog.xml'
 			referenceUrl 'hibernate:spring:cn.demo.random.rbac.entity?dialect=org.hibernate.dialect.MySQL5Dialect'
 			url 'jdbc:mysql://localhost:3306/demodb'
 			username 'root'

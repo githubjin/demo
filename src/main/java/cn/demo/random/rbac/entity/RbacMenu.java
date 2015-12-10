@@ -17,7 +17,10 @@ import javax.persistence.Table;
 @Table(name = "rbac_menu")
 public class RbacMenu extends BaseEntityClass{
 
-    @Id
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@Column(name = "menu_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long menuId;
     @Column(name = "nemu_name", length = 30)

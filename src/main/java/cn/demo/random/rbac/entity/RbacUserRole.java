@@ -17,7 +17,10 @@ import javax.persistence.Table;
 @Table(name = "rbac_user_role")
 public class RbacUserRole extends BaseEntityClass{
 
-    @Id
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@Column(name = "rid")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long rid;
     @Column(name = "user_id")

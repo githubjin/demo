@@ -6,5 +6,5 @@
 
     <!-- Application will add liquibase changelogs here -->
     <!-- <include file="classpath:db/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/> -->
-    <include file="changelog/20151209010646_changelog.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/20151210124601_changelog.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
