@@ -1,4 +1,4 @@
-package cn.demo.random.rbac.entity;
+package cn.demo.random.rbac.domain;
 
 
 import java.io.Serializable;

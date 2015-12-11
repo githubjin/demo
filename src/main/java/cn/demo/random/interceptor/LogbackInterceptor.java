@@ -9,7 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 /**
- * 暂时未起作用，需要添加到RequestMappingHandlerMapping interceptors 中
  * @author Yo
  *
  */

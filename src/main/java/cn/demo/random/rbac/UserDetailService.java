@@ -14,8 +14,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import cn.demo.random.rbac.entity.RbacUser;
-import cn.demo.random.rbac.repository.UserRepository;
+import cn.demo.random.rbac.domain.RbacUser;
+import cn.demo.random.rbac.mapper.UserMapper;
 
 /**
  * Created by DaoSui on 2015/10/18.
@@ -27,7 +27,7 @@ public class UserDetailService implements UserDetailsService{
     private static final Logger logger = LoggerFactory.getLogger(UserDetailService.class);
 
     @Autowired
-    private UserRepository userRepository;
+    private UserMapper userRepository;
 
     @Override
     public UserDetails loadUserByUsername(final String login) throws UsernameNotFoundException {

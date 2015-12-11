@@ -24,8 +24,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.stereotype.Component;
 
-import cn.demo.random.rbac.model.RolePermissionResources;
-import cn.demo.random.rbac.repository.UserRepository;
+import cn.demo.random.rbac.mapper.UserMapper;
 
 /**
  * Created by DaoSui on 2015/10/30.
@@ -35,7 +34,7 @@ public class UrlFilterInvocationSecurityMetadataSource implements FilterInvocati
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
     @Autowired
-    private UserRepository userRepository;
+    private UserMapper userRepository;
     private final static List<ConfigAttribute> NULL_CONFIG_ATTRIBUTE = Collections.emptyList();
     private Map<RequestMatcher, Collection<ConfigAttribute>> requestMap;
 
@@ -78,16 +77,16 @@ public class UrlFilterInvocationSecurityMetadataSource implements FilterInvocati
      */
     private Optional<Map<String, String>> loadResource() {
         Map<String, String> map = new LinkedHashMap<String, String>();
-        Optional<List<RolePermissionResources>> rolePermissionResources = this.userRepository.listAllPermissionsBindedToRoles();
-        if(rolePermissionResources.isPresent()) {
-            rolePermissionResources.get().forEach(pr -> {
-                if(map.containsKey(pr.getPsUrl())) {
-                    String s = map.get(pr.getPsUrl());
-                    map.put(pr.getPsUrl(), s + "," + pr.getRoleName());
+        List<Map<String, Object>> rolePermissionResources = this.userRepository.listAllPermissionsBindedToRoles();
+        if(!rolePermissionResources.isEmpty()){
+        	for(Map<String, Object> pr : rolePermissionResources){
+        		if(map.containsKey(pr.get("psUrl"))) {
+                    String s = map.get(pr.get("psUrl"));
+                    map.put((String)pr.get("psUrl"), s + "," + pr.get("roleName"));
                 }else{
-                    map.put(pr.getPsUrl(), pr.getRoleName());
+                    map.put((String)pr.get("psUrl"), (String)pr.get("roleName"));
                 }
-            });
+        	}
         }
         return Optional.ofNullable(map);
     }

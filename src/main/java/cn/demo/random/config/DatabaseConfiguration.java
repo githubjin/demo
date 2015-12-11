@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 import javax.sql.DataSource;
 
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +17,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.util.StringUtils;
 
 import com.codahale.metrics.MetricRegistry;
-import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -26,6 +30,7 @@ import cn.demo.random.config.liquibase.AsyncSpringLiquibase;
 import liquibase.integration.spring.SpringLiquibase;
 
 @Configuration
+@MapperScan(annotationClass = )
 @EnableTransactionManagement
 public class DatabaseConfiguration {
 	
@@ -74,6 +79,7 @@ public class DatabaseConfiguration {
 			config.addDataSourceProperty("prepStmtCacheSize", appProperties.getDatasource().getPreStmtCacheSize());
 			config.addDataSourceProperty("prepStmtCacheSqlLimit", appProperties.getDatasource().getPreStmtCacheSqlLimit());
 		}
+		//base data
 		return new HikariDataSource(config);
 	}
 
@@ -101,9 +107,21 @@ public class DatabaseConfiguration {
 		}
 		return liquibase;
 	}
-	
 	@Bean
+	public PlatformTransactionManager txManager(DataSource dataSource) {
+		return new DataSourceTransactionManager(dataSource);
+	}
+
+	@Bean
+	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
+		SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+		sessionFactory.setDataSource(dataSource);
+		return sessionFactory.getObject();
+	}
+
+	/*@Bean
 	public Hibernate4Module hibernate4Module() {
 		return new Hibernate4Module();
-	}
+	}*/
+
 }
