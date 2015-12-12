@@ -26,11 +26,12 @@ import com.codahale.metrics.MetricRegistry;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
+import cn.demo.random.annotations.Mapper;
 import cn.demo.random.config.liquibase.AsyncSpringLiquibase;
 import liquibase.integration.spring.SpringLiquibase;
 
 @Configuration
-@MapperScan(annotationClass = )
+@MapperScan(annotationClass = Mapper.class)
 @EnableTransactionManagement
 public class DatabaseConfiguration {
 	
