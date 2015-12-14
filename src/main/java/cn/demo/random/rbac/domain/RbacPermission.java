@@ -1,101 +1,92 @@
 package cn.demo.random.rbac.domain;
 
+import java.util.Date;
 
-import java.sql.Date;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-
-/**
- * Created by DaoSui on 2015/10/17.
- */
-@Entity
-@Table(name = "rbac_permission")
-public class RbacPermission extends BaseEntityClass {
-
-	private static final long serialVersionUID = 1L;
-	@Id
-	@Column(name = "ps_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class RbacPermission {
     private Long psId;
-    @Column(name = "role_id")
-    private Long rbacRoleId;
-    @Column(name = "ps_name", length = 30)
-    private String psName;
-    @Column(name = "ps_description", length = 100)
+
+    private String commonts;
+
+    private Date createDate;
+
+    private Long creator;
+
+    private String isvalid;
+
     private String psDescription;
-    @Column(name = "ps_group", length = 30)
+
     private String psGroup;
-    @Column(name="ps_url", length = 100)
+
+    private String psName;
+
+    private String psType;
+
     private String psUrl;
-    @Column(name="ps_type", length = 1)
-    @NotNull
-    private String psType = "1";
 
-    public RbacPermission() {
+    private Long roleId;
 
-    }
-
-    public RbacPermission(Date createDate, Long creator, String isValid, String commonts, Long rbacRoleId, String psName, String psDescription, String psGroup, String psUrl) {
-        super(createDate, creator, isValid, commonts);
-        this.rbacRoleId = rbacRoleId;
-        this.psName = psName;
-        this.psDescription = psDescription;
-        this.psGroup = psGroup;
-        this.psUrl = psUrl;
+    public Long getPsId() {
+        return psId;
     }
 
     public void setPsId(Long psId) {
         this.psId = psId;
     }
 
-    public void setRbacRoleId(Long rbacRoleId) {
-        this.rbacRoleId = rbacRoleId;
+    public String getCommonts() {
+        return commonts;
     }
 
-    public void setPsName(String psName) {
-        this.psName = psName;
+    public void setCommonts(String commonts) {
+        this.commonts = commonts;
     }
 
-    public void setPsDescription(String psDescription) {
-        this.psDescription = psDescription;
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setPsGroup(String psGroup) {
-        this.psGroup = psGroup;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
-    public void setPsUrl(String psUrl) {
-        this.psUrl = psUrl;
+    public Long getCreator() {
+        return creator;
     }
 
-    public Long getPsId() {
-        return psId;
+    public void setCreator(Long creator) {
+        this.creator = creator;
     }
 
-    public Long getRbacRoleId() {
-        return rbacRoleId;
+    public String getIsvalid() {
+        return isvalid;
     }
 
-    public String getPsName() {
-        return psName;
+    public void setIsvalid(String isvalid) {
+        this.isvalid = isvalid;
     }
 
     public String getPsDescription() {
         return psDescription;
     }
 
+    public void setPsDescription(String psDescription) {
+        this.psDescription = psDescription;
+    }
+
     public String getPsGroup() {
         return psGroup;
     }
 
-    public String getPsUrl() {
-        return psUrl;
+    public void setPsGroup(String psGroup) {
+        this.psGroup = psGroup;
+    }
+
+    public String getPsName() {
+        return psName;
+    }
+
+    public void setPsName(String psName) {
+        this.psName = psName;
     }
 
     public String getPsType() {
@@ -104,5 +95,21 @@ public class RbacPermission extends BaseEntityClass {
 
     public void setPsType(String psType) {
         this.psType = psType;
+    }
+
+    public String getPsUrl() {
+        return psUrl;
+    }
+
+    public void setPsUrl(String psUrl) {
+        this.psUrl = psUrl;
+    }
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 }

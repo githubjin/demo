@@ -24,7 +24,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.RequestMatcher;
 import org.springframework.stereotype.Component;
 
-import cn.demo.random.rbac.mapper.UserMapper;
+import cn.demo.random.rbac.mapper.RbacPermissionMapper;
+import cn.demo.random.rbac.model.RolePermissionResources;
 
 /**
  * Created by DaoSui on 2015/10/30.
@@ -34,7 +35,7 @@ public class UrlFilterInvocationSecurityMetadataSource implements FilterInvocati
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
     @Autowired
-    private UserMapper userRepository;
+    private RbacPermissionMapper rbacPermissionMapper;
     private final static List<ConfigAttribute> NULL_CONFIG_ATTRIBUTE = Collections.emptyList();
     private Map<RequestMatcher, Collection<ConfigAttribute>> requestMap;
 
@@ -77,14 +78,14 @@ public class UrlFilterInvocationSecurityMetadataSource implements FilterInvocati
      */
     private Optional<Map<String, String>> loadResource() {
         Map<String, String> map = new LinkedHashMap<String, String>();
-        List<Map<String, Object>> rolePermissionResources = this.userRepository.listAllPermissionsBindedToRoles();
+        List<RolePermissionResources> rolePermissionResources = this.rbacPermissionMapper.listAllPermissionsBindedToRoles();
         if(!rolePermissionResources.isEmpty()){
-        	for(Map<String, Object> pr : rolePermissionResources){
-        		if(map.containsKey(pr.get("psUrl"))) {
-                    String s = map.get(pr.get("psUrl"));
-                    map.put((String)pr.get("psUrl"), s + "," + pr.get("roleName"));
+        	for(RolePermissionResources pr : rolePermissionResources){
+        		if(map.containsKey(pr.getPsUrl())) {
+                    String s = map.get(pr);
+                    map.put((String)pr.getPsUrl(), s + "," + pr.getRoleName());
                 }else{
-                    map.put((String)pr.get("psUrl"), (String)pr.get("roleName"));
+                    map.put((String)pr.getPsUrl(), (String)pr.getRoleName());
                 }
         	}
         }

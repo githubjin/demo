@@ -1,88 +1,105 @@
 package cn.demo.random.rbac.domain;
 
+import java.util.Date;
 
-import java.sql.Date;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-/**
- * Created by DaoSui on 2015/10/17.
- */
-@Entity
-@Table(name = "rbac_menu")
-public class RbacMenu extends BaseEntityClass{
-
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@Column(name = "menu_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class RbacMenu {
     private Long menuId;
-    @Column(name = "nemu_name", length = 30)
-    private String menuName;
-    @Column(name = "menu_icon", length = 100)
+
+    private String commonts;
+
+    private Date createDate;
+
+    private Long creator;
+
+    private String isvalid;
+
     private String menuIcon;
-    @Column(name = "menu_url", length = 100)
+
+    private String nemuName;
+
     private String menuUrl;
-    @Column(name = "upper_menu")
-    private Long upperNemu = 0l;
-    @Column(name = "role_id")
+
     private Long roleId;
 
-    public RbacMenu() {
-
-    }
-
-    public RbacMenu(Date createDate, Long creator, String isValid, String commonts, String menuName, String menuIcon, String menuUrl, Long upperNemu) {
-        super(createDate, creator, isValid, commonts);
-        this.menuName = menuName;
-        this.menuIcon = menuIcon;
-        this.menuUrl = menuUrl;
-        this.upperNemu = upperNemu;
-    }
+    private Long upperMenu;
 
     public Long getMenuId() {
         return menuId;
-    }
-
-    public String getMenuName() {
-        return menuName;
-    }
-
-    public String getMenuIcon() {
-        return menuIcon;
-    }
-
-    public String getMenuUrl() {
-        return menuUrl;
-    }
-
-    public Long getUpperNemu() {
-        return upperNemu;
     }
 
     public void setMenuId(Long menuId) {
         this.menuId = menuId;
     }
 
-    public void setMenuName(String menuName) {
-        this.menuName = menuName;
+    public String getCommonts() {
+        return commonts;
+    }
+
+    public void setCommonts(String commonts) {
+        this.commonts = commonts;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public Long getCreator() {
+        return creator;
+    }
+
+    public void setCreator(Long creator) {
+        this.creator = creator;
+    }
+
+    public String getIsvalid() {
+        return isvalid;
+    }
+
+    public void setIsvalid(String isvalid) {
+        this.isvalid = isvalid;
+    }
+
+    public String getMenuIcon() {
+        return menuIcon;
     }
 
     public void setMenuIcon(String menuIcon) {
         this.menuIcon = menuIcon;
     }
 
+    public String getNemuName() {
+        return nemuName;
+    }
+
+    public void setNemuName(String nemuName) {
+        this.nemuName = nemuName;
+    }
+
+    public String getMenuUrl() {
+        return menuUrl;
+    }
+
     public void setMenuUrl(String menuUrl) {
         this.menuUrl = menuUrl;
     }
 
-    public void setUpperNemu(Long upperNemu) {
-        this.upperNemu = upperNemu;
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
+
+    public Long getUpperMenu() {
+        return upperMenu;
+    }
+
+    public void setUpperMenu(Long upperMenu) {
+        this.upperMenu = upperMenu;
     }
 }

@@ -31,7 +31,7 @@ import cn.demo.random.config.liquibase.AsyncSpringLiquibase;
 import liquibase.integration.spring.SpringLiquibase;
 
 @Configuration
-@MapperScan(annotationClass = Mapper.class)
+@MapperScan(basePackages = {"cn.demo.random.rbac.domain"}, annotationClass = Mapper.class)
 @EnableTransactionManagement
 public class DatabaseConfiguration {
 	
@@ -79,6 +79,9 @@ public class DatabaseConfiguration {
 			config.addDataSourceProperty("cachePrepStmts", appProperties.getDatasource().isCachePrepStmts());
 			config.addDataSourceProperty("prepStmtCacheSize", appProperties.getDatasource().getPreStmtCacheSize());
 			config.addDataSourceProperty("prepStmtCacheSqlLimit", appProperties.getDatasource().getPreStmtCacheSqlLimit());
+		}
+		if(metricRegistry != null) {
+			config.setMetricRegistry(metricRegistry);
 		}
 		//base data
 		return new HikariDataSource(config);

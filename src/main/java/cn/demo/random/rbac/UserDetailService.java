@@ -1,7 +1,6 @@
 package cn.demo.random.rbac;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -15,7 +14,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import cn.demo.random.rbac.domain.RbacUser;
-import cn.demo.random.rbac.mapper.UserMapper;
+import cn.demo.random.rbac.mapper.RbacUserMapper;
+import cn.demo.random.rbac.mapper.RbacUserRoleMapper;
 
 /**
  * Created by DaoSui on 2015/10/18.
@@ -27,23 +27,27 @@ public class UserDetailService implements UserDetailsService{
     private static final Logger logger = LoggerFactory.getLogger(UserDetailService.class);
 
     @Autowired
-    private UserMapper userRepository;
-
+    private RbacUserMapper rbacUserMapper;
+    @Autowired
+    private RbacUserRoleMapper rbacUserRoleMapper;
+    
     @Override
     public UserDetails loadUserByUsername(final String login) throws UsernameNotFoundException {
         logger.debug("Authenticating {}", login);
         String lowercaseLogin = login.trim().toLowerCase();
-        Optional<RbacUser> userFromDatabase =  userRepository.findOneByUserName(lowercaseLogin);
-        return userFromDatabase.map(user -> {
-            if (!user.getActivated()) {
+        RbacUser user = rbacUserMapper.findOneByUserName(lowercaseLogin);
+        if(user != null){
+        	if (!user.getActivated()) {
                 throw new UserNotActivatedException("User " + lowercaseLogin + " was not activated");
             }
-            List<GrantedAuthority> grantedAuthorities = userRepository.listUserAuthoritis(user.getUserId()).stream()
+            List<GrantedAuthority> grantedAuthorities = rbacUserRoleMapper.listUserAuthoritis(user.getUserId()).stream()
                     .map(authority -> new SimpleGrantedAuthority(authority))
                     .collect(Collectors.toList());
             return new org.springframework.security.core.userdetails.User(lowercaseLogin,
                     user.getUserPwd(),
                     grantedAuthorities);
-        }).orElseThrow(() -> new UsernameNotFoundException("User " + lowercaseLogin + " was not found in the database"));
+        }else{
+        	throw new UsernameNotFoundException("User " + lowercaseLogin + " was not found in the database");
+        }
     }
 }

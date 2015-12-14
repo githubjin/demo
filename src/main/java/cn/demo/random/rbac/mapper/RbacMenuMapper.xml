@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.demo.random.rbac.mapper.RbacMenuMapper" >
+  <resultMap id="BaseResultMap" type="cn.demo.random.rbac.domain.RbacMenu" >
+    <id column="menu_id" property="menuId" jdbcType="BIGINT" />
+    <result column="commonts" property="commonts" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="DATE" />
+    <result column="creator" property="creator" jdbcType="BIGINT" />
+    <result column="isvalid" property="isvalid" jdbcType="VARCHAR" />
+    <result column="menu_icon" property="menuIcon" jdbcType="VARCHAR" />
+    <result column="nemu_name" property="nemuName" jdbcType="VARCHAR" />
+    <result column="menu_url" property="menuUrl" jdbcType="VARCHAR" />
+    <result column="role_id" property="roleId" jdbcType="BIGINT" />
+    <result column="upper_menu" property="upperMenu" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    menu_id, commonts, create_date, creator, isvalid, menu_icon, nemu_name, menu_url, 
+    role_id, upper_menu
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.demo.random.rbac.domain.RbacMenuExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from demodb..rbac_menu
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from demodb..rbac_menu
+    where menu_id = #{menuId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from demodb..rbac_menu
+    where menu_id = #{menuId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.demo.random.rbac.domain.RbacMenuExample" >
+    delete from demodb..rbac_menu
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.demo.random.rbac.domain.RbacMenu" >
+    insert into demodb..rbac_menu (menu_id, commonts, create_date, 
+      creator, isvalid, menu_icon, 
+      nemu_name, menu_url, role_id, 
+      upper_menu)
+    values (#{menuId,jdbcType=BIGINT}, #{commonts,jdbcType=VARCHAR}, #{createDate,jdbcType=DATE}, 
+      #{creator,jdbcType=BIGINT}, #{isvalid,jdbcType=VARCHAR}, #{menuIcon,jdbcType=VARCHAR}, 
+      #{nemuName,jdbcType=VARCHAR}, #{menuUrl,jdbcType=VARCHAR}, #{roleId,jdbcType=BIGINT}, 
+      #{upperMenu,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.demo.random.rbac.domain.RbacMenu" >
+    insert into demodb..rbac_menu
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="menuId != null" >
+        menu_id,
+      </if>
+      <if test="commonts != null" >
+        commonts,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="creator != null" >
+        creator,
+      </if>
+      <if test="isvalid != null" >
+        isvalid,
+      </if>
+      <if test="menuIcon != null" >
+        menu_icon,
+      </if>
+      <if test="nemuName != null" >
+        nemu_name,
+      </if>
+      <if test="menuUrl != null" >
+        menu_url,
+      </if>
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="upperMenu != null" >
+        upper_menu,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="menuId != null" >
+        #{menuId,jdbcType=BIGINT},
+      </if>
+      <if test="commonts != null" >
+        #{commonts,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=DATE},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=BIGINT},
+      </if>
+      <if test="isvalid != null" >
+        #{isvalid,jdbcType=VARCHAR},
+      </if>
+      <if test="menuIcon != null" >
+        #{menuIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="nemuName != null" >
+        #{nemuName,jdbcType=VARCHAR},
+      </if>
+      <if test="menuUrl != null" >
+        #{menuUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="roleId != null" >
+        #{roleId,jdbcType=BIGINT},
+      </if>
+      <if test="upperMenu != null" >
+        #{upperMenu,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.demo.random.rbac.domain.RbacMenuExample" resultType="java.lang.Integer" >
+    select count(*) from demodb..rbac_menu
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update demodb..rbac_menu
+    <set >
+      <if test="record.menuId != null" >
+        menu_id = #{record.menuId,jdbcType=BIGINT},
+      </if>
+      <if test="record.commonts != null" >
+        commonts = #{record.commonts,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createDate != null" >
+        create_date = #{record.createDate,jdbcType=DATE},
+      </if>
+      <if test="record.creator != null" >
+        creator = #{record.creator,jdbcType=BIGINT},
+      </if>
+      <if test="record.isvalid != null" >
+        isvalid = #{record.isvalid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.menuIcon != null" >
+        menu_icon = #{record.menuIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="record.nemuName != null" >
+        nemu_name = #{record.nemuName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.menuUrl != null" >
+        menu_url = #{record.menuUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleId != null" >
+        role_id = #{record.roleId,jdbcType=BIGINT},
+      </if>
+      <if test="record.upperMenu != null" >
+        upper_menu = #{record.upperMenu,jdbcType=BIGINT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update demodb..rbac_menu
+    set menu_id = #{record.menuId,jdbcType=BIGINT},
+      commonts = #{record.commonts,jdbcType=VARCHAR},
+      create_date = #{record.createDate,jdbcType=DATE},
+      creator = #{record.creator,jdbcType=BIGINT},
+      isvalid = #{record.isvalid,jdbcType=VARCHAR},
+      menu_icon = #{record.menuIcon,jdbcType=VARCHAR},
+      nemu_name = #{record.nemuName,jdbcType=VARCHAR},
+      menu_url = #{record.menuUrl,jdbcType=VARCHAR},
+      role_id = #{record.roleId,jdbcType=BIGINT},
+      upper_menu = #{record.upperMenu,jdbcType=BIGINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.demo.random.rbac.domain.RbacMenu" >
+    update demodb..rbac_menu
+    <set >
+      <if test="commonts != null" >
+        commonts = #{commonts,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=DATE},
+      </if>
+      <if test="creator != null" >
+        creator = #{creator,jdbcType=BIGINT},
+      </if>
+      <if test="isvalid != null" >
+        isvalid = #{isvalid,jdbcType=VARCHAR},
+      </if>
+      <if test="menuIcon != null" >
+        menu_icon = #{menuIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="nemuName != null" >
+        nemu_name = #{nemuName,jdbcType=VARCHAR},
+      </if>
+      <if test="menuUrl != null" >
+        menu_url = #{menuUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="roleId != null" >
+        role_id = #{roleId,jdbcType=BIGINT},
+      </if>
+      <if test="upperMenu != null" >
+        upper_menu = #{upperMenu,jdbcType=BIGINT},
+      </if>
+    </set>
+    where menu_id = #{menuId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.demo.random.rbac.domain.RbacMenu" >
+    update demodb..rbac_menu
+    set commonts = #{commonts,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=DATE},
+      creator = #{creator,jdbcType=BIGINT},
+      isvalid = #{isvalid,jdbcType=VARCHAR},
+      menu_icon = #{menuIcon,jdbcType=VARCHAR},
+      nemu_name = #{nemuName,jdbcType=VARCHAR},
+      menu_url = #{menuUrl,jdbcType=VARCHAR},
+      role_id = #{roleId,jdbcType=BIGINT},
+      upper_menu = #{upperMenu,jdbcType=BIGINT}
+    where menu_id = #{menuId,jdbcType=BIGINT}
+  </update>
+</mapper>

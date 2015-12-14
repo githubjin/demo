@@ -1,157 +1,86 @@
 package cn.demo.random.rbac.domain;
 
+import java.util.Date;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.Size;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-/**
- * Created by DaoSui on 2015/10/17.
- */
-@Entity
-@Table(name = "rbac_user")
-public class RbacUser extends BaseEntityClass{
-
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-    @Column(name="user_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class RbacUser {
     private Long userId;
-    @Column(name = "user_name", length = 30)
-    private String userName;
-    @Column(name = "user_pwd", length = 60)
-    private String userPwd;
-    @Column(name = "real_name", length = 30)
-    private String realName;
-    @Column(name = "email", length = 30)
-    private String email;
-    @Column(name = "tel", length = 20)
-    private String tel;
-    @Column(name = "validate_date")
-    private Date validateDate;
-    @Column(name="activated", nullable = false)
-    private boolean activated = false;
 
-    @Size(min = 2, max = 5)
-    @Column(name = "lang_key", length = 5)
-    private String langKey;
+    private String commonts;
 
-    @Size(max = 20)
-    @Column(name = "activation_key", length = 20)
-    @JsonIgnore
+    private Date createDate;
+
+    private Long creator;
+
+    private String isvalid;
+
+    private Boolean activated;
+
     private String activationKey;
 
-    @Size(max = 20)
-    @Column(name = "reset_key", length = 20)
+    private String email;
+
+    private String langKey;
+
+    private String realName;
+
+    private Date resetDate;
+
     private String resetKey;
 
-//    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")
-    @Column(name = "reset_date", nullable = true)
-    private Timestamp resetDate = null;
+    private String tel;
 
-    public RbacUser() {
-    }
+    private String userName;
 
-    public RbacUser(Date createDate, Long creator, String isValid, String commonts, String userName, String userPwd, String realName, String email, String tel, Date validateDate, boolean activated, String langKey, String activationKey, String resetKey, Timestamp resetDate) {
-        super(createDate, creator, isValid, commonts);
-        this.userName = userName;
-        this.userPwd = userPwd;
-        this.realName = realName;
-        this.email = email;
-        this.tel = tel;
-        this.validateDate = validateDate;
-        this.activated = activated;
-        this.langKey = langKey;
-        this.activationKey = activationKey;
-        this.resetKey = resetKey;
-        this.resetDate = resetDate;
+    private String userPwd;
+
+    private Date validateDate;
+
+    public Long getUserId() {
+        return userId;
     }
 
     public void setUserId(Long userId) {
         this.userId = userId;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getCommonts() {
+        return commonts;
     }
 
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd;
+    public void setCommonts(String commonts) {
+        this.commonts = commonts;
     }
 
-    public void setRealName(String realName) {
-        this.realName = realName;
+    public Date getCreateDate() {
+        return createDate;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
-    public void setTel(String tel) {
-        this.tel = tel;
+    public Long getCreator() {
+        return creator;
     }
 
-    public void setValidateDate(Date validateDate) {
-        this.validateDate = validateDate;
+    public void setCreator(Long creator) {
+        this.creator = creator;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getIsvalid() {
+        return isvalid;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setIsvalid(String isvalid) {
+        this.isvalid = isvalid;
     }
 
-    public String getUserPwd() {
-        return userPwd;
+    public Boolean getActivated() {
+        return activated;
     }
 
-    public String getRealName() {
-        return realName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getTel() {
-        return tel;
-    }
-
-    public Date getValidateDate() {
-        return validateDate;
-    }
-
-    public void setActivated(boolean activated) {
+    public void setActivated(Boolean activated) {
         this.activated = activated;
-    }
-
-    public boolean getActivated() {
-
-        return activated;
-    }
-
-    public boolean isActivated() {
-        return activated;
-    }
-
-    public String getLangKey() {
-        return langKey;
-    }
-
-    public void setLangKey(String langKey) {
-        this.langKey = langKey;
     }
 
     public String getActivationKey() {
@@ -162,6 +91,38 @@ public class RbacUser extends BaseEntityClass{
         this.activationKey = activationKey;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getLangKey() {
+        return langKey;
+    }
+
+    public void setLangKey(String langKey) {
+        this.langKey = langKey;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
+    public Date getResetDate() {
+        return resetDate;
+    }
+
+    public void setResetDate(Date resetDate) {
+        this.resetDate = resetDate;
+    }
+
     public String getResetKey() {
         return resetKey;
     }
@@ -170,11 +131,35 @@ public class RbacUser extends BaseEntityClass{
         this.resetKey = resetKey;
     }
 
-    public Timestamp getResetDate() {
-        return resetDate;
+    public String getTel() {
+        return tel;
     }
 
-    public void setResetDate(Timestamp resetDate) {
-        this.resetDate = resetDate;
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserPwd() {
+        return userPwd;
+    }
+
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd;
+    }
+
+    public Date getValidateDate() {
+        return validateDate;
+    }
+
+    public void setValidateDate(Date validateDate) {
+        this.validateDate = validateDate;
     }
 }
