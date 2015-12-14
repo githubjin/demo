@@ -242,7 +242,7 @@
   </update>
   
   <!-- 自定义操作 -->
-  <select id="listUserAuthoritis" resultMap="BaseResultMap" parameterType="java.lang.Long">
+  <select id="listUserAuthoritis" resultType="String" parameterType="java.lang.Long">
   	SELECT role_name FROM rbac_user_role ur,rbac_role r WHERE ur.user_id=#{userId,jdbcType=BIGINT} AND ur.role_id=r.role_id
   </select>
 </mapper>

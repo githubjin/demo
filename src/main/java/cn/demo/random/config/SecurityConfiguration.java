@@ -18,6 +18,7 @@ import org.springframework.security.data.repository.query.SecurityEvaluationCont
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 
+import cn.demo.random.security.AuthenticationProvider;
 import cn.demo.random.security.JwtConfigurer;
 import cn.demo.random.security.TokenProvider;
 
@@ -54,6 +55,9 @@ public class SecurityConfiguration {
 	@Autowired
 	private FilterInvocationSecurityMetadataSource urlFilterInvocationSecurityMetadataSource;
 	
+	@Autowired
+	private AuthenticationProvider authenticationProvider;
+	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
@@ -61,7 +65,7 @@ public class SecurityConfiguration {
 	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
-		auth
+		auth.authenticationProvider(authenticationProvider)
 			.userDetailsService(userDetailsService)
 			.passwordEncoder(passwordEncoder());
 	}
@@ -95,6 +99,11 @@ public class SecurityConfiguration {
 					.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 				.and()
 					.authorizeRequests()
+					.antMatchers("/api/register").permitAll()
+					.antMatchers("/api/activate").permitAll()
+					.antMatchers("/api/authenticate").permitAll()
+					.antMatchers("/api/account/reset_password/init").permitAll()
+					.antMatchers("/api/account/reset_password/finish").permitAll()
 					.withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
 						@Override
 						public <O extends FilterSecurityInterceptor> O postProcess(O object) {

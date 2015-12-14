@@ -36,12 +36,6 @@ public class ExampleController{
         return "---------" + text + "---------- demo.getServer():" + demo.getJwt().getHmacKey();
     }
     
-    @CrossOrigin
-    @RequestMapping("/{name}")
-    public String random(@PathVariable String name){
-        return "hello " + name;
-    }
-    
     @RequestMapping(value="arguments")
     public List<String> applicatinArguments(){
     	return this.applicationArguments.getNonOptionArgs();

@@ -12,6 +12,11 @@ public class Token {
     String userId;
     List<String> roles;
     
+	public Token() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Token(String iss, long exp, String userId, List<String> roles) {
 		super();
 		this.iss = iss;

@@ -25,5 +25,16 @@ public class Application {
     		}
     	}
         SpringApplication.run(Application.class, args);
+//        WebAsyncManagerIntegrationFilter
+//        SecurityContextPersistenceFilter
+//        HeaderWriterFilter
+//        LogoutFilter
+//        JwtFilter
+//        RequestCacheAwareFilter
+//        SecurityContextHolderAwareRequestFilter
+//        AnonymousAuthenticationFilter
+//        SessionManagementFilter
+//        ExceptionTranslationFilter
+//        FilterSecurityInterceptor
     }
 }

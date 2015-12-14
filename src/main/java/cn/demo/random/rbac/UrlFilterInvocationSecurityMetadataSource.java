@@ -116,7 +116,7 @@ public class UrlFilterInvocationSecurityMetadataSource implements FilterInvocati
                 .entrySet()) {
             allAttributes.addAll(entry.getValue());
         }
-
+        logger.info("All config attributes : {}", allAttributes);
         return allAttributes;
     }
 
