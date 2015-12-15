@@ -55,15 +55,15 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-security")
     compile("org.springframework.boot:spring-boot-starter-test")
     compile("org.springframework.security:spring-security-jwt")
-    compile("com.h2database:h2")
+    //compile("com.h2database:h2")
     compile("joda-time:joda-time")
     //compile("joda-time:joda-time-hibernate:1.4")
     compile("org.springframework.security:spring-security-data")
-    compile("org.liquibase:liquibase-core")
-    compile("com.mattbertolini:liquibase-slf4j:${liquibase_slf4j_version}")
+    //compile("org.liquibase:liquibase-core")
+    //compile("com.mattbertolini:liquibase-slf4j:${liquibase_slf4j_version}")
     
     // for use in on-the-fly database setup and migrations
-    //compile 'org.flywaydb:flyway-core'
+    compile 'org.flywaydb:flyway-core'
     
     compile("mysql:mysql-connector-java")
     
@@ -83,7 +83,7 @@ dependencies {
 	compile("com.ryantenney.metrics:metrics-spring:${metrics_spring_version}")
 	    
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    testCompile("com.mattbertolini:liquibase-slf4j:${liquibase_slf4j_version}")
+    //testCompile("com.mattbertolini:liquibase-slf4j:${liquibase_slf4j_version}")
     
 }
 

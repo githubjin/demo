@@ -8,8 +8,8 @@ import org.springframework.core.task.TaskExecutor;
 import org.springframework.util.StopWatch;
 
 import cn.demo.random.config.Constants;
-import liquibase.exception.LiquibaseException;
-import liquibase.integration.spring.SpringLiquibase;
+//import liquibase.exception.LiquibaseException;
+//import liquibase.integration.spring.SpringLiquibase;
 
 /**
  * Special liquibase.integration.spring.SpringLiquibase that will update the database asynchronously
@@ -29,9 +29,10 @@ import liquibase.integration.spring.SpringLiquibase;
  * @author Yo
  *
  */
-public class AsyncSpringLiquibase extends SpringLiquibase {
+public class AsyncSpringLiquibase {
+//public class AsyncSpringLiquibase extends SpringLiquibase {
 	
-	private final Logger logger = org.slf4j.LoggerFactory.getLogger(AsyncSpringLiquibase.class);
+	/*private final Logger logger = org.slf4j.LoggerFactory.getLogger(AsyncSpringLiquibase.class);
 	
 	@Autowired
 	@Qualifier("taskExecutor")
@@ -69,6 +70,6 @@ public class AsyncSpringLiquibase extends SpringLiquibase {
 		super.afterPropertiesSet();
 		watch.stop();
 		logger.debug("Started Liquibase in {} ms", watch.getTotalTimeMillis());
-	}
+	}*/
 
 }

@@ -63,11 +63,11 @@ public class SecurityConfiguration {
 	@Autowired
 	private TokenProvider tokenProvider;
 	
-	@Autowired
+	/*@Autowired
     private RbacPermissionMapper rbacPermissionMapper;
 	
 	@Autowired
-	private FilterInvocationSecurityMetadataSource urlFilterInvocationSecurityMetadataSource;
+	private FilterInvocationSecurityMetadataSource urlFilterInvocationSecurityMetadataSource;*/
 	
 	@Autowired
 	private AuthenticationProvider authenticationProvider;

@@ -11,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
-import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,8 +26,9 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 import cn.demo.random.annotations.Mapper;
-import cn.demo.random.config.liquibase.AsyncSpringLiquibase;
-import liquibase.integration.spring.SpringLiquibase;
+//import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
+//import cn.demo.random.config.liquibase.AsyncSpringLiquibase;
+//import liquibase.integration.spring.SpringLiquibase;
 
 @Configuration
 @MapperScan(basePackages = {"cn.demo.random.rbac.domain"}, annotationClass = Mapper.class)
@@ -87,7 +87,8 @@ public class DatabaseConfiguration {
 		return new HikariDataSource(config);
 	}
 
-	@Bean
+	// liquibase 适用于jpa， 不适用于 mybatis
+	/*@Bean
 	public SpringLiquibase liquibase(DataSource dataSource, DataSourceProperties dataSourceProperties,
 			LiquibaseProperties liquibaseProperties) {
 		
@@ -110,7 +111,8 @@ public class DatabaseConfiguration {
 			logger.debug("Configuring Liquibase.");
 		}
 		return liquibase;
-	}
+	}*/
+	
 	@Bean
 	public PlatformTransactionManager txManager(DataSource dataSource) {
 		return new DataSourceTransactionManager(dataSource);

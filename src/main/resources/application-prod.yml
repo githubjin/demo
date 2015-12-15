@@ -18,6 +18,11 @@ spring:
 ##
 liquibase:
     contexts: prod
+##
+# multipart properties
+##
+multipart:
+  location: /opt/images
 
 ####################################################################################
 #                                 custom configurations                            #
