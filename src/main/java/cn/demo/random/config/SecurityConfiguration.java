@@ -1,11 +1,17 @@
 package cn.demo.random.config;
 
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
-import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -16,8 +22,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.data.repository.query.SecurityEvaluationContextExtension;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
-import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 
+import cn.demo.random.rbac.domain.RbacUser;
+import cn.demo.random.rbac.mapper.RbacPermissionMapper;
+import cn.demo.random.rbac.mapper.RbacUserMapper;
+import cn.demo.random.rbac.model.RolePermissionResources;
 import cn.demo.random.security.AuthenticationProvider;
 import cn.demo.random.security.JwtConfigurer;
 import cn.demo.random.security.TokenProvider;
@@ -46,11 +55,16 @@ import cn.demo.random.security.TokenProvider;
 @EnableGlobalMethodSecurity(securedEnabled=true,prePostEnabled=true)
 public class SecurityConfiguration {
 	
+	private final Logger logger = LoggerFactory.getLogger(SecurityConfiguration.class);
+	
 	@Autowired
 	private UserDetailsService userDetailsService; 
 	
 	@Autowired
 	private TokenProvider tokenProvider;
+	
+	@Autowired
+    private RbacPermissionMapper rbacPermissionMapper;
 	
 	@Autowired
 	private FilterInvocationSecurityMetadataSource urlFilterInvocationSecurityMetadataSource;
@@ -72,7 +86,11 @@ public class SecurityConfiguration {
 
 	@Bean
 	@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
-	public WebSecurityConfigurerAdapter applicationSecurityConfiguration(){
+	public WebSecurityConfigurerAdapter applicationSecurityConfiguration(RbacPermissionMapper rbacPermissionMapper){
+		
+		// 查询数据库
+		Optional<LinkedHashMap<String,String>> loadResource = this.loadResource(rbacPermissionMapper);
+		logger.info("---------------------WebsecurityConfigurerAdapter rolePermissionResources isPresent: {} and length : {} --------------------", loadResource.isPresent(), loadResource.get().size());
 		return new WebSecurityConfigurerAdapter(){
 
 //			@Override
@@ -99,22 +117,21 @@ public class SecurityConfiguration {
 					.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 				.and()
 					.authorizeRequests()
-					.antMatchers("/api/register").permitAll()
-					.antMatchers("/api/activate").permitAll()
-					.antMatchers("/api/authenticate").permitAll()
-					.antMatchers("/api/account/reset_password/init").permitAll()
-					.antMatchers("/api/account/reset_password/finish").permitAll()
-					.withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
-						@Override
-						public <O extends FilterSecurityInterceptor> O postProcess(O object) {
-							object.setSecurityMetadataSource(urlFilterInvocationSecurityMetadataSource);
-							return object;
-						}
-					}).and().authorizeRequests().anyRequest().permitAll()
-				.and()
-					.apply(securityConfigurerAdapter());
+		            .antMatchers("/api/register").permitAll()
+		            .antMatchers("/api/activate").permitAll()
+		            .antMatchers("/api/authenticate").permitAll()
+		            .antMatchers("/api/account/reset_password/init").permitAll()
+		            .antMatchers("/api/account/reset_password/finish").permitAll();
+				
+				if(loadResource.isPresent()){
+					LinkedHashMap<String, String> map = loadResource.get();
+					for(Map.Entry<String, String> entry : map.entrySet()){
+						http.authorizeRequests().antMatchers(entry.getKey()).hasAnyAuthority(entry.getValue().split(","));
+					}
+				}
+				http.authorizeRequests().antMatchers("/api/**").authenticated();
+				http.apply(securityConfigurerAdapter());
 			}
-			
 		};
 	}
 	
@@ -133,5 +150,26 @@ public class SecurityConfiguration {
 	public AuthenticationManager authenticationManager(AuthenticationManagerBuilder builder){
 		
 	}*/
+	
+	/**
+	 *  查询资源与角色的对应关系
+	 * @param repository
+	 * @return
+	 */
+    private Optional<LinkedHashMap<String, String>> loadResource(RbacPermissionMapper repository) {
+    	LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+        List<RolePermissionResources> rolePermissionResources = repository.listAllPermissionsBindedToRoles();
+        if(!rolePermissionResources.isEmpty()){
+        	for(RolePermissionResources pr : rolePermissionResources){
+        		if(map.containsKey(pr.getPsUrl())) {
+                    String s = map.get(pr);
+                    map.put((String)pr.getPsUrl(), s + "," + pr.getRoleName());
+                }else{
+                    map.put((String)pr.getPsUrl(), (String)pr.getRoleName());
+                }
+        	}
+        }
+        return Optional.ofNullable(map);
+    }
 	
 }
