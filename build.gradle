@@ -38,9 +38,14 @@ repositories {
     maven{ url "http://repo.spring.io/milestone"}
 }
 
+configurations {
+	compile.exclude module: "spring-boot-starter-tomcat"
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-jetty")
     //compile("org.springframework.boot:spring-boot-starter-data-jpa")
     //Mybatis-spring
     compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatis_spring_boot_starter_version}")
