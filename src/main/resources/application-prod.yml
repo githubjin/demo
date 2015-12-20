@@ -12,7 +12,18 @@ spring:
         url: jdbc:mysql://localhost:3306/demodbpro?useUnicode=true&characterEncoding=utf-8
         name: 
         username: root
-        password:            
+        password:          
+    redis:
+        host: 192.168.220.128  
+    mail:
+        host: email.ujn.edu.cn
+        username: cngradms@ujn.edu.cn
+        password: wlyrjsyb
+        port: 25
+        test-connection: true    
+        properties:
+          from: cngradms@ujn.edu.cn
+          personal: demo system        
 ##
 # liquibase configuration
 ##
@@ -58,3 +69,6 @@ app:
             host: localhost
             port: 2003
             prefix: yoman
+    mail:
+      from: cngradms@ujn.edu.cn
+      personal: demo system             

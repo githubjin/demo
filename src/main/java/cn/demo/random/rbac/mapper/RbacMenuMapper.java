@@ -1,12 +1,14 @@
 package cn.demo.random.rbac.mapper;
 
-import cn.demo.random.annotations.Mapper;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
 import cn.demo.random.rbac.domain.RbacMenu;
 import cn.demo.random.rbac.domain.RbacMenuExample;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
-@Mapper
+@Repository
 public interface RbacMenuMapper {
     int countByExample(RbacMenuExample example);
 

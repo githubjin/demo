@@ -12,7 +12,7 @@ import com.codahale.metrics.MetricRegistry;
 
 public class MetricsGauges {
 
-	// 实例化一个registry, 最核心的一个模块，相对于一个应用程序的metrics系统的容器，维护一个Map
+	// 实锟斤拷锟斤拷一锟斤拷registry, 锟斤拷锟斤拷牡锟揭伙拷锟侥ｏ拷椋拷锟斤拷锟斤拷一锟斤拷应锟矫筹拷锟斤拷锟絤etrics系统锟斤拷锟斤拷锟斤拷锟斤拷维锟斤拷一锟斤拷Map
 	private static final MetricRegistry metrics = new MetricRegistry();
 	
 	private static Queue<String> queue = new LinkedBlockingQueue<String>();
@@ -22,7 +22,7 @@ public class MetricsGauges {
 	@Test
 	public void test() throws InterruptedException{
 		reporter.start(2, TimeUnit.SECONDS);
-		// 实例化一个Guage
+		// 实锟斤拷锟斤拷一锟斤拷Guage
 		Gauge<Integer> gauge = new Gauge<Integer>(){
 			@Override
 			public Integer getValue() {
@@ -33,7 +33,7 @@ public class MetricsGauges {
 		
 		for(int i=0;i<20;i++){
 			queue.add("Guage:" + i);
-			Thread.sleep(500);
+			Thread.sleep(50);
 		}
 	}
 }

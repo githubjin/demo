@@ -15,8 +15,7 @@ import org.springframework.stereotype.Component;
 
 import cn.demo.random.rbac.UserNotActivatedException;
 import cn.demo.random.rbac.domain.RbacUser;
-import cn.demo.random.rbac.mapper.RbacUserMapper;
-import cn.demo.random.rbac.mapper.RbacUserRoleMapper;
+import cn.demo.random.rbac.service.IRbacService;
 
 /**
  * Created by DaoSui on 2015/10/18.
@@ -28,20 +27,18 @@ public class UserDetailService implements UserDetailsService{
     private static final Logger logger = LoggerFactory.getLogger(UserDetailService.class);
 
     @Autowired
-    private RbacUserMapper rbacUserMapper;
-    @Autowired
-    private RbacUserRoleMapper rbacUserRoleMapper;
+    private IRbacService rbacService;
     
     @Override
     public UserDetails loadUserByUsername(final String login) throws UsernameNotFoundException {
         logger.debug("Authenticating {}", login);
         String lowercaseLogin = login.trim();
-        RbacUser user = rbacUserMapper.findOneByUserName(lowercaseLogin);
+        RbacUser user = rbacService.findOneByUserName(lowercaseLogin);
         if(user != null){
         	if (!user.getActivated()) {
                 throw new UserNotActivatedException("User " + lowercaseLogin + " was not activated");
             }
-        	List<String> list = rbacUserRoleMapper.listUserAuthoritis(user.getUserId());
+        	List<String> list = rbacService.listUserAuthoritis(user.getUserId());
         	List<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
         	for(String authority : list){
         		grantedAuthorities.add(new SimpleGrantedAuthority(authority));

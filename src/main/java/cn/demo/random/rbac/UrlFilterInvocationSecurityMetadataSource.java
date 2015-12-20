@@ -22,20 +22,19 @@ import org.springframework.security.web.FilterInvocation;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.RequestMatcher;
-import org.springframework.stereotype.Component;
 
-import cn.demo.random.rbac.mapper.RbacPermissionMapper;
 import cn.demo.random.rbac.model.RolePermissionResources;
+import cn.demo.random.rbac.service.IRbacService;
 
 /**
  * Created by DaoSui on 2015/10/30.
  */
-@Component("urlFilterInvocationSecurityMetadataSource")
+//@Component("urlFilterInvocationSecurityMetadataSource")
 public class UrlFilterInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource, InitializingBean {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
     @Autowired
-    private RbacPermissionMapper rbacPermissionMapper;
+    private IRbacService rbacService;
     private final static List<ConfigAttribute> NULL_CONFIG_ATTRIBUTE = Collections.emptyList();
     private Map<RequestMatcher, Collection<ConfigAttribute>> requestMap;
 
@@ -78,7 +77,7 @@ public class UrlFilterInvocationSecurityMetadataSource implements FilterInvocati
      */
     private Optional<Map<String, String>> loadResource() {
         Map<String, String> map = new LinkedHashMap<String, String>();
-        List<RolePermissionResources> rolePermissionResources = this.rbacPermissionMapper.listAllPermissionsBindedToRoles();
+        List<RolePermissionResources> rolePermissionResources = rbacService.listAllPermissionsBindedToRoles();
         if(!rolePermissionResources.isEmpty()){
         	for(RolePermissionResources pr : rolePermissionResources){
         		if(map.containsKey(pr.getPsUrl())) {

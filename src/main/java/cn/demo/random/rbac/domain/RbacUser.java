@@ -1,9 +1,13 @@
 package cn.demo.random.rbac.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class RbacUser {
-    private Long userId;
+public class RbacUser implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
+	private Long userId;
 
     private String commonts;
 
@@ -34,8 +38,9 @@ public class RbacUser {
     private String userPwd;
 
     private Date validateDate;
+    
 
-    public Long getUserId() {
+	public Long getUserId() {
         return userId;
     }
 

@@ -35,7 +35,7 @@ public class MetricsCounter {
 		reporter.start(1, TimeUnit.SECONDS);
 		for(int i=0;i<20;i++){
 			add("Counter add " + i);
-			Thread.sleep(500);
+			Thread.sleep(50);
 			take();
 		}
 	}

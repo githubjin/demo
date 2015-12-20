@@ -1,12 +1,14 @@
 package cn.demo.random.rbac.mapper;
 
-import cn.demo.random.annotations.Mapper;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
 import cn.demo.random.rbac.domain.RbacUserRole;
 import cn.demo.random.rbac.domain.RbacUserRoleExample;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
-@Mapper
+@Repository
 public interface RbacUserRoleMapper {
     int countByExample(RbacUserRoleExample example);
 

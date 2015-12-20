@@ -22,7 +22,7 @@ public class MetricsMeter {
 		reporter.start(1, TimeUnit.SECONDS);
 		for(int i=0;i<20;i++){
 			handleRequest();
-			Thread.sleep(100);
+			Thread.sleep(50);
 		}
 	}
 }

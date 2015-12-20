@@ -1,13 +1,14 @@
 package cn.demo.random.rbac.mapper;
 
-import cn.demo.random.annotations.Mapper;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
 import cn.demo.random.rbac.domain.RbacPermission;
 import cn.demo.random.rbac.domain.RbacPermissionExample;
 import cn.demo.random.rbac.model.RolePermissionResources;
-
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
-@Mapper
+@Repository
 public interface RbacPermissionMapper {
     int countByExample(RbacPermissionExample example);
 
@@ -31,10 +32,10 @@ public interface RbacPermissionMapper {
 
     int updateByPrimaryKey(RbacPermission record);
     
-    /* ------------------------------- 自定义查询 ------------------------------------*/
-    /**
+	/**
      * 查询所有角色和权限关联关系
      * @return
      */
     List<RolePermissionResources> listAllPermissionsBindedToRoles();
+    
 }

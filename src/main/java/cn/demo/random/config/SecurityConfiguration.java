@@ -21,12 +21,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.data.repository.query.SecurityEvaluationContextExtension;
-import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
 
-import cn.demo.random.rbac.domain.RbacUser;
 import cn.demo.random.rbac.mapper.RbacPermissionMapper;
-import cn.demo.random.rbac.mapper.RbacUserMapper;
 import cn.demo.random.rbac.model.RolePermissionResources;
+import cn.demo.random.rbac.service.IRbacService;
 import cn.demo.random.security.AuthenticationProvider;
 import cn.demo.random.security.JwtConfigurer;
 import cn.demo.random.security.TokenProvider;
@@ -86,10 +84,10 @@ public class SecurityConfiguration {
 
 	@Bean
 	@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
-	public WebSecurityConfigurerAdapter applicationSecurityConfiguration(RbacPermissionMapper rbacPermissionMapper){
+	public WebSecurityConfigurerAdapter applicationSecurityConfiguration(IRbacService rbacService){
 		
 		// 查询数据库
-		Optional<LinkedHashMap<String,String>> loadResource = this.loadResource(rbacPermissionMapper);
+		Optional<LinkedHashMap<String,String>> loadResource = this.loadResource(rbacService);
 		logger.info("---------------------WebsecurityConfigurerAdapter rolePermissionResources isPresent: {} and length : {} --------------------", loadResource.isPresent(), loadResource.get().size());
 		return new WebSecurityConfigurerAdapter(){
 
@@ -156,9 +154,9 @@ public class SecurityConfiguration {
 	 * @param repository
 	 * @return
 	 */
-    private Optional<LinkedHashMap<String, String>> loadResource(RbacPermissionMapper repository) {
+    private Optional<LinkedHashMap<String, String>> loadResource(IRbacService rbacService) {
     	LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
-        List<RolePermissionResources> rolePermissionResources = repository.listAllPermissionsBindedToRoles();
+        List<RolePermissionResources> rolePermissionResources = rbacService.listAllPermissionsBindedToRoles();
         if(!rolePermissionResources.isEmpty()){
         	for(RolePermissionResources pr : rolePermissionResources){
         		if(map.containsKey(pr.getPsUrl())) {

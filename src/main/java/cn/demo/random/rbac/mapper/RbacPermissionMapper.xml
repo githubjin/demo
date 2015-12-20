@@ -14,8 +14,7 @@
     <result column="ps_url" property="psUrl" jdbcType="VARCHAR" />
     <result column="role_id" property="roleId" jdbcType="BIGINT" />
   </resultMap>
-  <!-- 角色和资源的对应关系 -->
-  <resultMap id="RolePermissionResources" type="cn.demo.random.rbac.model.RolePermissionResources">
+  <resultMap id="RolePermissionResourcesMap" type="cn.demo.random.rbac.model.RolePermissionResources">
   	<result column="role_name" property="roleName" jdbcType="VARCHAR" />
   	<result column="ps_url" property="psUrl" jdbcType="VARCHAR" />
   	<result column="ps_type" property="psType" jdbcType="VARCHAR" />
@@ -310,9 +309,8 @@
     where ps_id = #{psId,jdbcType=BIGINT}
   </update>
   
-  <!-- 自定义操作 -->
-  <select id="listAllPermissionsBindedToRoles" resultMap="RolePermissionResources">
-  	SELECT r.role_name,p.ps_url,p.ps_type 
-  		FROM rbac_permission p,rbac_role r WHERE p.role_id=r.role_id
+  <!-- custom query -->
+  <select id="listAllPermissionsBindedToRoles" resultMap="RolePermissionResourcesMap">
+  	SELECT r.role_name,p.ps_url,p.ps_type FROM rbac_permission p,rbac_role r WHERE p.role_id=r.role_id
   </select>
 </mapper>

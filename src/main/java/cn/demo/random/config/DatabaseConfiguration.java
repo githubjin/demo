@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.util.StringUtils;
@@ -25,13 +26,8 @@ import com.codahale.metrics.MetricRegistry;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-import cn.demo.random.annotations.Mapper;
-//import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
-//import cn.demo.random.config.liquibase.AsyncSpringLiquibase;
-//import liquibase.integration.spring.SpringLiquibase;
-
 @Configuration
-@MapperScan(basePackages = {"cn.demo.random.rbac.domain"}, annotationClass = Mapper.class)
+@MapperScan(basePackages = {"cn.demo.random"}, annotationClass = Repository.class)
 @EnableTransactionManagement
 public class DatabaseConfiguration {
 	

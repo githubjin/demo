@@ -11,6 +11,7 @@ public class AppProperties {
 	private final Liquibase liquibase = new Liquibase();
 	private final Datasource datasource = new Datasource();
 	private final Metrics metrics = new Metrics();
+	private final Mail mail = new Mail();
 	
 	public Metrics getMetrics() {
 		return metrics;
@@ -27,6 +28,29 @@ public class AppProperties {
 	
 	public Datasource getDatasource() {
 		return datasource;
+	}
+	
+	public Mail getMail() {
+		return mail;
+	}
+
+	public static class Mail {
+		
+		private String from;
+		private String personal;
+		
+		public String getFrom() {
+			return from;
+		}
+		public void setFrom(String from) {
+			this.from = from;
+		}
+		public String getPersonal() {
+			return personal;
+		}
+		public void setPersonal(String personal) {
+			this.personal = personal;
+		}
 	}
 	
 	public static class Metrics {

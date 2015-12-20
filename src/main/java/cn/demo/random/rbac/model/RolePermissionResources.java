@@ -10,21 +10,25 @@ public class RolePermissionResources implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	//    role_name,p.ps_url,p.is_need_certified
+	
     private String roleName;
     private String psUrl;
     private String psType;
 
+
     public RolePermissionResources() {
-    }
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    public RolePermissionResources(String roleName, String psUrl, String psType) {
-        this.roleName = roleName;
-        this.psUrl = psUrl;
-        this.psType = psType;
-    }
+	public RolePermissionResources(String roleName, String psUrl, String psType) {
+		super();
+		this.roleName = roleName;
+		this.psUrl = psUrl;
+		this.psType = psType;
+	}
 
-    public String getRoleName() {
+	public String getRoleName() {
         return roleName;
     }
 
