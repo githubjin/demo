@@ -43,7 +43,8 @@ configurations {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-devtools")
+	// restart issue with redis in coding but build, so removed, 
+    //compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-jetty")
     //compile("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -54,6 +55,8 @@ dependencies {
     //compile("org.mybatis:mybatis:${mybatis_version}")
     //compile("org.springframework:spring-jdbc")
     //compile("org.springframework.batch:spring-batch-infrastructure")
+    
+    compile("org.springframework.boot:spring-boot-starter-mail")
     
     compile("org.springframework.boot:spring-boot-starter-aop")
     compile("org.springframework.boot:spring-boot-starter-actuator")
@@ -87,6 +90,12 @@ dependencies {
 	compile("io.dropwizard.metrics:metrics-jvm:${dropwizard_metrics_version}")
 	
 	compile("com.ryantenney.metrics:metrics-spring:${metrics_spring_version}")
+	
+	compile("org.apache.commons:commons-lang3:${commons_lang_version}")
+	
+	compile("org.thymeleaf:thymeleaf")
+	
+	//compile ("org.springframework.boot:spring-boot-starter-thymeleaf")
 	    
     testCompile("org.springframework.boot:spring-boot-starter-test")
     //testCompile("com.mattbertolini:liquibase-slf4j:${liquibase_slf4j_version}")
