@@ -4,4 +4,12 @@
 *.bin
 .gradle/
 .classpath
-.settings/
+.settings
+.settings/*
+demoOne.iml
+demoOne.ipr
+.idea
+.idea/*
+.classpath
+.project
+demoOne.iws

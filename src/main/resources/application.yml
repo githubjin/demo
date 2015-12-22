@@ -4,6 +4,10 @@
 spring:
     profiles:
         active: dev
+    thymeleaf:
+        mode: HTML5
+    messages:
+        basename: classpath:/i18n/messages 
 #spring.profiles: prod
 #spring.profiles.include: proddb,prodmq
 

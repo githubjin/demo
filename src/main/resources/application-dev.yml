@@ -14,13 +14,17 @@ spring:
         username: root
         password: 
     redis:
-        host: 192.168.60.129
+        host: 192.168.60.130
     mail:
         host: email.ujn.edu.cn
         username: cngradms@ujn.edu.cn
         password: wlyrjsyb
         port: 25
         test-connection: true
+    thymeleaf:
+        cache: false     
+    messages:
+        cache-seconds: 1   
           
 ##
 # listener

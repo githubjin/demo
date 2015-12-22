@@ -46,7 +46,9 @@ public class UserDetailService implements UserDetailsService{
             /*List<GrantedAuthority> grantedAuthorities = rbacUserRoleMapper.listUserAuthoritis(user.getUserId()).stream()
                     .map(authority -> new SimpleGrantedAuthority(authority))
                     .collect(Collectors.toList());*/
-            return new org.springframework.security.core.userdetails.User(lowercaseLogin, user.getUserPwd(),grantedAuthorities);
+        	CustomUser principal = new CustomUser(lowercaseLogin, user.getUserPwd(),grantedAuthorities);
+        	principal.setEmail(user.getEmail()).setLangKey(user.getLangKey()).setUserName(user.getUserName());
+            return principal;
             
         }else{
         	throw new UsernameNotFoundException("User " + lowercaseLogin + " was not found in the database");

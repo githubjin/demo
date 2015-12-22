@@ -9,12 +9,13 @@ import org.apache.commons.lang3.CharEncoding;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
+import org.thymeleaf.spring4.SpringTemplateEngine;
 
 import cn.demo.random.config.AppProperties;
 import cn.demo.random.rbac.domain.RbacUser;
@@ -31,7 +32,10 @@ public class MailService {
 	private AppProperties appProperties;
 	
 	@Autowired
-	private TemplateEngine templateEngine;
+	private SpringTemplateEngine templateEngine;
+	
+	@Autowired
+	private MessageSource messageSource;
 	
 	@Async
 	public void sendMail(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
@@ -59,11 +63,19 @@ public class MailService {
 		context.setVariable("user", user);
 		context.setVariable("baseUrl", baseUrl);
 		String content = templateEngine.process("activationEmail", context);
-		
-		
+		String subject = messageSource.getMessage("email.activation.title", null, locale);
+		sendMail(user.getEmail(), subject, content, false, true);
 	}
 	
+	@Async
 	public void sendPasswordResetMail(RbacUser user, String baseUrl) {
-		
+		logger.debug("Sending password reset e-mail to '{}'", user.getEmail());
+		Locale locale = Locale.forLanguageTag(user.getLangKey());
+		Context context = new Context(locale);
+		context.setVariable("user", user);
+		context.setVariable("baseUrl", baseUrl);
+		String content = templateEngine.process("passwordResetEmail", context);
+		String subject = messageSource.getMessage("email.reset.title", null, locale);
+		sendMail(user.getEmail(), subject, content, false, true);
 	}
 }

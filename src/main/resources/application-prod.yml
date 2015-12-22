@@ -23,7 +23,9 @@ spring:
         test-connection: true    
         properties:
           from: cngradms@ujn.edu.cn
-          personal: demo system        
+          personal: demo system     
+    thymeleaf:
+        cache: true                    
 ##
 # liquibase configuration
 ##
