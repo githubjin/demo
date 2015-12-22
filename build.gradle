@@ -64,6 +64,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-test")
     compile("org.springframework.security:spring-security-jwt")
     compile("org.springframework.boot:spring-boot-starter-redis")
+    compile("org.springframework.boot:spring-boot-starter-amqp")
     //compile("com.h2database:h2")
     compile("joda-time:joda-time")
     //compile("joda-time:joda-time-hibernate:1.4")
