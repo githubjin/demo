@@ -1,0 +1,23 @@
+demo-dev-mysql:
+  container_name: demo-dev-mysql
+  image: mysql
+  #volumes:
+   # - ~/volumes/demo/dev-mysql:/var/lib/mysql/
+  environment:
+    - MYSQL_USER=root
+    - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    - MYSQL_DATABASE=demodb
+  ports:
+    - "3306:3306"
+  command: mysqld --lower_case_table_names=1
+demo-dev-rabbitmq:
+  container_name: demo-dev-rabbitmq
+  image: rabbitmq  
+  ports:
+    - "5672:5672"
+    - "15672:15672"
+demo-dev-redis:
+  container_name: demo-dev-redis
+  image: redis
+  ports:
+    - "6379:6379"  
