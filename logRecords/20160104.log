@@ -1,0 +1,601 @@
+[INFO] cn.demo.random.Application - Starting Application on ubuntu with PID 16586 (/home/yo/git/demo-coding/bin started by yo in /home/yo/git/demo-coding)
+[INFO] cn.demo.random.Application - The following profiles are active: dev
+[INFO] org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fa49800: startup date [Mon Jan 04 16:37:55 CST 2016]; root of context hierarchy
+[INFO] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+[INFO] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'ignoredPathsWebSecurityConfigurerAdapter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/SpringBootWebSecurityConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration; factoryMethodName=ignoredPathsWebSecurityConfigurerAdapter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/ManagementWebSecurityAutoConfiguration.class]]
+[INFO] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'managementServletContext' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration; factoryMethodName=managementServletContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointWebMvcHypermediaManagementContextConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration; factoryMethodName=managementServletContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointWebMvcAutoConfiguration.class]]
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatisConfiguration' of type [class cn.demo.random.config.MybatisConfiguration$$EnhancerBySpringCGLIB$$8298a27c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration' of type [class org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$$EnhancerBySpringCGLIB$$d172d9f5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringToMigrationVersionConverter' of type [class org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$StringToMigrationVersionConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'app.CONFIGURATION_PROPERTIES' of type [class cn.demo.random.config.AppProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] cn.demo.random.metrics.MetricsConfiguration - Initializing Metrics JMX reporting
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'metricsConfiguration' of type [class cn.demo.random.metrics.MetricsConfiguration$$EnhancerBySpringCGLIB$$2d84a3d1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.ryantenney.metrics.spring.config.annotation.DelegatingMetricsConfiguration' of type [class com.ryantenney.metrics.spring.config.annotation.DelegatingMetricsConfiguration$$EnhancerBySpringCGLIB$$5dadd06] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'getMetricRegistry' of type [class com.codahale.metrics.MetricRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'databaseConfiguration' of type [class cn.demo.random.config.DatabaseConfiguration$$EnhancerBySpringCGLIB$$bc2d26e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource.CONFIGURATION_PROPERTIES' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-0 - is starting.
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'datasource' of type [class com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis.CONFIGURATION_PROPERTIES' of type [class org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [class org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$fa71d2fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [class org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rbacPermissionMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rbacUserMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rbacRoleMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rbacMenuMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'rbacUserRoleMapper' of type [class org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'asyncConfiguration' of type [class cn.demo.random.config.AsyncConfiguration$$EnhancerBySpringCGLIB$$f175f3b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'taskExecutor' of type [class cn.demo.random.async.ExceptionHandlingAsyncTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [class org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$ad777839] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a40fe7cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [class org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$cd3130c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [class org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6889f56f' of type [class org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [class org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$800f6537] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [class org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [class org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$b6db229] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$4595b24d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cache.CONFIGURATION_PROPERTIES' of type [class org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration' of type [class org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration$$EnhancerBySpringCGLIB$$4932cb67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheConfiguration' of type [class cn.demo.random.config.CacheConfiguration$$EnhancerBySpringCGLIB$$f3536e6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration' of type [class org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$$EnhancerBySpringCGLIB$$4ad25b87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.autoconfigure.redis.RedisProperties' of type [class org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisPooledConnectionConfiguration' of type [class org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisPooledConnectionConfiguration$$EnhancerBySpringCGLIB$$7eaf323f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisConnectionFactory' of type [class org.springframework.data.redis.connection.jedis.JedisConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'refisTemplate' of type [class org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration' of type [class org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration$$EnhancerBySpringCGLIB$$ddd4bfb8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisTemplate' of type [class org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheManager' of type [class org.springframework.data.redis.cache.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'cacheAutoConfigurationValidator' of type [class org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'getHealthCheckRegistry' of type [class com.codahale.metrics.health.HealthCheckRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] cn.demo.random.config.LocaleConfiguration - loading non-reloadable mail messages resources
+[INFO] org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory - Server initialized with port: 8001
+[INFO] org.eclipse.jetty.server.Server - jetty-9.2.14.v20151106
+[INFO] application - Initializing Spring embedded WebApplicationContext
+[INFO] org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3628 ms
+[INFO] org.springframework.boot.context.embedded.FilterRegistrationBean - Mapping filter: 'metricFilter' to: [/*]
+[INFO] org.springframework.boot.context.embedded.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO] org.springframework.boot.context.embedded.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO] org.springframework.boot.context.embedded.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO] org.springframework.boot.context.embedded.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO] org.springframework.boot.context.embedded.DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+[INFO] org.springframework.boot.context.embedded.FilterRegistrationBean - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[INFO] org.springframework.boot.context.embedded.FilterRegistrationBean - Mapping filter: 'applicationContextIdFilter' to: [/*]
+[INFO] org.springframework.boot.context.embedded.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+[INFO] org.eclipse.jetty.server.handler.ContextHandler - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@17befef0{/,file:/tmp/jetty-docbase.5604701481458649183.8001/,AVAILABLE}
+[INFO] org.eclipse.jetty.server.Server - Started @5421ms
+[WARN] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'clientInboundChannelExecutor'
+[INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'clientOutboundChannelExecutor'
+[INFO] cn.demo.random.config.SecurityConfiguration - ---------------------WebsecurityConfigurerAdapter rolePermissionResources isPresent: true and length : 11 --------------------
+[INFO] org.springframework.aop.framework.CglibAopProxy - Unable to proxy method [protected final org.springframework.boot.actuate.endpoint.mvc.ManagementServletContext org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint.getManagementServletContext()] because it is final: All calls to this method via a proxy will NOT be routed to the target instance.
+[INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService  'messageBrokerTaskScheduler'
+[INFO] org.springframework.web.socket.server.support.WebSocketHandlerMapping - Mapped URL path [/websocket/demo/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+[INFO] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService  'brokerChannelExecutor'
+[INFO] org.springframework.web.socket.messaging.WebSocketAnnotationMethodMessageHandler - Mapped "{[/marcopolo],messageType=[MESSAGE]}" onto public cn.demo.random.websocket.domain.HelloMessage cn.demo.random.websocket.web.GreetingController.helloMessage(cn.demo.random.websocket.domain.HelloMessage)
+[INFO] org.springframework.web.socket.messaging.WebSocketAnnotationMethodMessageHandler - Mapped "{[/hello],messageType=[MESSAGE]}" onto public cn.demo.random.websocket.domain.Greeting cn.demo.random.websocket.web.GreetingController.greeting(cn.demo.random.websocket.domain.HelloMessage,cn.demo.random.security.CustomUser) throws java.lang.Exception
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fa49800: startup date [Mon Jan 04 16:37:55 CST 2016]; root of context hierarchy
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Detected ResponseBodyAdvice bean in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$MvcEndpointAdvice
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - Detected ResponseBodyAdvice bean in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+[INFO] cn.demo.random.config.MvcConfiguration - ************************************Adding interceptors******************************************
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/activate]}" onto public java.lang.String cn.demo.random.web.rest.AccountResource.registerAccount()
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/authenticate],methods=[POST]}" onto public java.lang.String cn.demo.random.web.rest.UserJwtAuthTokenController.authorize(java.lang.String,java.lang.String) throws com.fasterxml.jackson.core.JsonProcessingException
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api]}" onto public java.lang.Object cn.demo.random.controller.ExampleController.home(cn.demo.random.security.CustomUser)
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/sendMail],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> cn.demo.random.controller.ExampleController.sendMail(cn.demo.random.security.CustomUser,java.lang.String)
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/arguments]}" onto public java.util.List<java.lang.String> cn.demo.random.controller.ExampleController.applicatinArguments()
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/randoms],methods=[POST]}" onto public cn.demo.random.controller.ExampleController$A cn.demo.random.controller.ExampleController.randomValues(cn.demo.random.controller.ExampleController$A)
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/spittles],methods=[PUT],consumes=[application/json],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> cn.demo.random.rabbitmq.web.RabbitmqController.sendNewSpittle(cn.demo.random.rabbitmq.domain.Spittle)
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/api/pushMessage]}" onto public void cn.demo.random.websocket.web.MarcoController.pushMessage(java.lang.String)
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+[INFO] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO] org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter - Adding welcome page: class path resource [public/index.html]
+[INFO] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+[INFO] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Default mapping to handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/docs/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Detected ResponseBodyAdvice implementation in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$MvcEndpointAdvice
+[INFO] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Detected ResponseBodyAdvice implementation in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+[INFO] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO] application - jolokia: No access restrictor found at classpath:/jolokia-access.xml, access to all MBeans is allowed
+[INFO] org.springframework.aop.framework.CglibAopProxy - Unable to proxy method [public final void org.springframework.boot.actuate.endpoint.mvc.JolokiaMvcEndpoint.setApplicationContext(org.springframework.context.ApplicationContext) throws org.springframework.beans.BeansException] because it is final: All calls to this method via a proxy will NOT be routed to the target instance.
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/docs],produces=[text/html]}" onto public java.lang.String org.springframework.boot.actuate.endpoint.mvc.DocsMvcEndpoint.redirect()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/docs/],produces=[text/html]}" onto public java.lang.String org.springframework.boot.actuate.endpoint.mvc.DocsMvcEndpoint.browse()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/flyway || /flyway.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/actuator || /actuator.json],produces=[application/json]}" onto public org.springframework.hateoas.ResourceSupport org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint.links()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/jolokia/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.actuate.endpoint.mvc.JolokiaMvcEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[INFO] org.springframework.boot.actuate.endpoint.mvc.EndpointHandlerMapping - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[INFO] org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/css/**'], []
+[INFO] org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/js/**'], []
+[INFO] org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/images/**'], []
+[INFO] org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**/favicon.ico'], []
+[INFO] org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/error'], []
+[INFO] org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f5f4d48, org.springframework.security.web.context.SecurityContextPersistenceFilter@310cc4d, org.springframework.security.web.header.HeaderWriterFilter@71c91121, org.springframework.security.web.authentication.logout.LogoutFilter@7f08c343, cn.demo.random.security.JwtFilter@2f025e9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e68aede, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74e1d60b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c8e096, org.springframework.security.web.session.SessionManagementFilter@45b2b0ed, org.springframework.security.web.access.ExceptionTranslationFilter@74901d7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6158113e]
+[INFO] org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$ManagementWebSecurityConfigurerAdapter$EndpointPathRequestMatcher@188058fb, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@914ab92, org.springframework.security.web.context.SecurityContextPersistenceFilter@67d55a46, org.springframework.security.web.header.HeaderWriterFilter@10ffe32f, org.springframework.security.web.authentication.logout.LogoutFilter@3adb4cc8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6ee07d7f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72115c48, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d982fbe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79d3c655, org.springframework.security.web.session.SessionManagementFilter@13868c41, org.springframework.security.web.access.ExceptionTranslationFilter@70ccb3bf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@145f1f97]
+[INFO] org.springframework.security.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@733345f5, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5add7380, org.springframework.security.web.context.SecurityContextPersistenceFilter@4505015b, org.springframework.security.web.header.HeaderWriterFilter@6329a5b9, org.springframework.security.web.csrf.CsrfFilter@6a4d57b7, org.springframework.security.web.authentication.logout.LogoutFilter@1e5190bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49bc1f6c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67167f8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e638553, org.springframework.security.web.session.SessionManagementFilter@6c92a59d, org.springframework.security.web.access.ExceptionTranslationFilter@6cac0334]
+[INFO] org.flywaydb.core.internal.util.VersionPrinter - Flyway 3.2.1 by Boxfuse
+[INFO] org.flywaydb.core.internal.dbsupport.DbSupportFactory - Database: jdbc:mysql://127.0.0.1:3306/demodb?useUnicode=true&characterEncoding=utf8 (MySQL 5.7)
+[INFO] org.flywaydb.core.internal.command.DbValidate - Validated 3 migrations (execution time 00:00.015s)
+[INFO] org.flywaydb.core.internal.command.DbMigrate - Current version of schema `demodb`: 3
+[INFO] org.flywaydb.core.internal.command.DbMigrate - Schema `demodb` is up to date. No migration necessary.
+[INFO] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'datasource' has been autodetected for JMX exposure
+[INFO] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Bean with name 'exampleController' has been autodetected for JMX exposure
+[INFO] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located managed bean 'exampleController': registering with JMX server as MBean [random:name=ExampleController]
+[INFO] org.springframework.jmx.export.annotation.AnnotationMBeanExporter - Located MBean 'datasource': registering with JMX server as MBean [com.zaxxer.hikari:name=datasource,type=HikariDataSource]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Registering beans for JMX exposure on startup
+[INFO] org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 0
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'flywayEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=flywayEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[INFO] org.springframework.boot.actuate.endpoint.jmx.EndpointMBeanExporter - Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[INFO] org.springframework.context.support.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+[INFO] org.springframework.amqp.rabbit.connection.CachingConnectionFactory - Created new connection: SimpleConnection@1db67e24 [delegate=amqp://guest@127.0.0.1:5672/]
+[INFO] org.springframework.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable or auto-delete Exchange (yo.exchange) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+[INFO] org.springframework.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable or auto-delete Exchange (ex.info) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+[INFO] org.springframework.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (yo.queue) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+[INFO] org.springframework.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (q.info) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+[INFO] org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Starting...
+[INFO] org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+[INFO] org.springframework.messaging.simp.broker.SimpleBrokerMessageHandler - Started.
+[INFO] cn.demo.random.event.ContextReloadListener - ##------------------------------ContextRefreshedEvent---------------------------
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.annotation.internalRequiredAnnotationProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.annotation.internalCommonAnnotationProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.event.internalEventListenerProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.event.internalEventListenerFactory
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: application
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rbacService
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mybatisConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: cacheConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: securityConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: databaseConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: thymeleafConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: asyncConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: localeConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: tokenProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: authenticationProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: userDetailService
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: disposableBeanImp
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: controllerLogger
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: aggregateMetricsConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricsExporterWriter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricsConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: customPublicMetrics
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mailService
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: accountResource
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: userJwtAuthTokenController
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: logbackInterceptor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: applicationRunnerImp
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: commandLineRunnerImp
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: exampleController
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rabbitmqController
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rabbitmqConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spittleAlterHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: webSocketSecurityConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: marcoController
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: greetingController
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: webSocketStompConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: txManager
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: sqlSessionFactory
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rbacUserRoleMapper
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rbacMenuMapper
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rbacRoleMapper
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rbacUserMapper
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rbacPermissionMapper
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.cache.annotation.ProxyCachingConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.cache.config.internalCacheAdvisor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: cacheOperationSource
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: cacheInterceptor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: refisTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.aop.config.internalAutoProxyCreator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: webMvcConfigurationAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: authenticationManagerBuilder
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: enableGlobalAuthenticationAutowiredConfigurer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: methodSecurityInterceptor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: methodSecurityMetadataSource
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: preInvocationAuthorizationAdvice
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: objectPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: passwordEncoder
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: applicationSecurityConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: securityEvaluationContextExtension
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metaDataSourceAdvisor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.transaction.config.internalTransactionAdvisor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: transactionAttributeSource
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: transactionInterceptor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.transaction.config.internalTransactionalEventListenerFactory
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: datasource
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: templateEngine
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: emailTemplateResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.scheduling.annotation.ProxyAsyncConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.annotation.internalAsyncAnnotationProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.scheduling.annotation.SchedulingConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.context.annotation.internalScheduledAnnotationProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: taskExecutor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: messageSource
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricsAggregate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: redisMetricWriter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: com.ryantenney.metrics.spring.config.annotation.DelegatingMetricsConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: getMetricRegistry
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: getHealthCheckRegistry
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: exceptionMeteredAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: meteredAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: timedAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: countedAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: gaugeFieldAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: gaugeMethodAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: cachedGaugeAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: healthCheckBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: legacyCountedAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: legacyCachedGaugeAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: legacyMetricAnnotationBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.amqp.rabbit.config.internalRabbitListenerAnnotationProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.amqp.rabbit.config.internalRabbitListenerEndpointRegistry
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: csrfChannelInterceptor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: inboundChannelSecurity
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: securityContextChannelInterceptor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: inboundMessageSecurityMetadataSource
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.web.socket.config.annotation.DelegatingWebSocketMessageBrokerConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: stompWebSocketHandlerMapping
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: subProtocolWebSocketHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: webSocketScopeConfigurer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: webSocketMessageBrokerStats
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: clientInboundChannel
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: clientInboundChannelExecutor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: clientOutboundChannel
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: clientOutboundChannelExecutor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: brokerChannel
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: brokerChannelExecutor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: simpAnnotationMethodMessageHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: simpleBrokerMessageHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: stompBrokerRelayMessageHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: userDestinationMessageHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: userRegistryMessageHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: messageBrokerTaskScheduler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: brokerMessagingTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: brokerMessageConverter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: userDestinationResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: userRegistry
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: handshakeHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: httpSessionHandshakeIntercepter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.AutoConfigurationPackages
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: app.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: liquibase.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: propertySourcesPlaceholderConfigurer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$JettyWebSocketConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: websocketContainerCustomizer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedJetty
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: jettyEmbeddedServletContainerFactory
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: embeddedServletContainerCustomizerBeanPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dispatcherServlet
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dispatcherServletRegistration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.mvc.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: error
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: beanNameViewResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: errorAttributes
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: basicErrorController
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: errorPageCustomizer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: preserveErrorControllerTargetClassPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: requestMappingHandlerAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: requestMappingHandlerMapping
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcContentNegotiationManager
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: viewControllerHandlerMapping
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: beanNameHandlerMapping
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: resourceHandlerMapping
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcResourceUrlProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: defaultServletHandlerMapping
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcConversionService
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcValidator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcPathMatcher
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcUrlPathHelper
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcUriComponentsContributor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: httpRequestHandlerAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: simpleControllerHandlerAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: handlerExceptionResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcViewResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter$FaviconConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: faviconHandlerMapping
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: faviconRequestHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: defaultViewResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: requestContextFilter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: viewResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.resources.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: hiddenHttpMethodFilter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: httpPutFormContentFilter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$JdbcTemplateConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: jdbcTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: namedParameterJdbcTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$DataSourceInitializerConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dataSourceInitializer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$HikariPoolDataSourceMetadataProviderConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: hikariPoolDataSourceMetadataProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: tomcatPoolDataSourceMetadataProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.datasource.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dataSourceInitializerPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: sqlSessionTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mybatis.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration$AuditEventRepositoryConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: auditEventRepository
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.AuditAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: auditListener
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: authenticationAuditListener
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: authorizationAuditListener
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: redisTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: stringRedisTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$RedisPooledConnectionConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: redisConnectionFactory
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.autoconfigure.redis.RedisProperties
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: cacheManager
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: cacheAutoConfigurationValidatorPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: cacheAutoConfigurationValidator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.cache.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration$NoOpCacheStatisticsConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: noOpCacheStatisticsProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration$ConcurrentMapCacheStatisticsConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: concurrentMapCacheStatisticsProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.CacheStatisticsAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: delegatingApplicationListener
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: webSecurityExpressionHandler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: springSecurityFilterChain
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: privilegeEvaluator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: autowiredWebSecurityConfigurersIgnoreParents
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: requestDataValueProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: ignoredPathsWebSecurityConfigurerAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.security.AuthenticationManagerConfiguration$AuthenticationManagerConfigurationListener
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.security.AuthenticationManagerConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: authenticationManager
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: springBootAuthenticationConfigurerAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.security.BootGlobalAuthenticationConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: bootGlobalAuthenticationConfigurationAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.security.SecurityDataConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: authenticationEventPublisher
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: securityProperties
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.JolokiaAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: jolokiaEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: jolokia.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$ManagementWebSecurityConfigurerAdapter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$ManagementSecurityPropertiesConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: flyway
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: flywayInitializer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: flyway.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: stringToMigrationVersionConverter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration$MessagingTemplateConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rabbitMessagingTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration$RabbitConnectionFactoryCreator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rabbitConnectionFactory
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.amqp.RabbitAnnotationDrivenConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rabbitListenerContainerFactory
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: amqpAdmin
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rabbitTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.rabbitmq.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mailSender
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.mail.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$MailHealthIndicatorConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mailHealthIndicator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DiskSpaceHealthIndicatorConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: diskSpaceHealthIndicator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: diskSpaceHealthIndicatorProperties
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$RabbitHealthIndicatorConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: rabbitHealthIndicator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$RedisHealthIndicatorConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: redisHealthIndicator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration$DataSourcesHealthIndicatorConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dbHealthIndicator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.HealthIndicatorAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: healthAggregator
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: management.health.status.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricsDropwizardAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dropwizardMetricServices
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dropwizardPublicMetrics
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricRepositoryAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mbeanExporter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: objectNamingStrategy
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mbeanServer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$CacheStatisticsConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: cachePublicMetrics
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration$DataSourceMetricsConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dataSourcePublicMetrics
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.PublicMetricsAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: systemPublicMetrics
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricReaderPublicMetrics
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$InfoPropertiesConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$RequestMappingEndpointConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: requestMappingEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration$FlywayEndpointConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: flywayEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: environmentEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: healthEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: beansEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: infoEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricsEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: traceEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: dumpEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: autoConfigurationReportEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: shutdownEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: configurationPropertiesReportEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: endpoints.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointMBeanExportAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: endpointMBeanExporter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: endpoints.jmx.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: serverProperties
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: duplicateServerPropertiesDetector
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.ManagementServerPropertiesAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: managementServerProperties
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: jacksonObjectMapperBuilder
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.jackson.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: jacksonObjectMapper
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: stringHttpMessageConverter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.http.encoding.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mappingJackson2HttpMessageConverter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: messageConverters
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration$EntityLinksConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: entityLinksPluginRegistry
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: controllerEntityLinks
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: delegatingEntityLinks
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.hateoas.config.HateoasConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: linkRelationMessageSource
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration$HypermediaConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: halObjectMapperConfigurer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: _halObjectMapper
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.hateoas.config.HypermediaSupportBeanDefinitionRegistrar$DefaultObjectMapperCustomizer#0
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.hateoas.config.HypermediaSupportBeanDefinitionRegistrar$Jackson2ModuleRegisteringBeanPostProcessor#0
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: _linkDiscovererRegistry
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.hateoas.LinkDiscoverers#0
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: defaultRelProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: annotationRelProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: relProviderPluginRegistry
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: _relProvider
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.hateoas.HypermediaHttpMessageConverterConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: halMessageConverterSupportedMediaTypeCustomizer
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.hateoas.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcManagementContextConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: endpointHandlerMapping
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: mvcEndpoints
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: environmentMvcEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: healthMvcEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricsMvcEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: endpoints.health.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: endpoints.cors.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$MvcEndpointAdvice
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: managementServletContext
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: halJsonMvcEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: docsMvcEndpoint
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$EndpointWebMvcConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextFilterConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: applicationContextIdFilter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: managementContextResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration$MetricExportPropertiesConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.metrics.export.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricExportAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricWritersMetricExporter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.MetricFilterAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: metricFilter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.TraceRepositoryAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: traceRepository
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.actuate.autoconfigure.TraceWebFilterAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: webRequestLoggingFilter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: management.trace.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: springApplicationAdminRegistrar
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$JdkDynamicAutoProxyConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: persistenceExceptionTranslationPostProcessor
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: pageableResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: sortResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: pagedResourcesAssembler
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: pagedResourcesAssemblerArgumentResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.data.web.config.SpringDataJacksonConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: jacksonGeoModule
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafResourceHandlingConfig
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafViewResolverConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: thymeleafViewResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$ThymeleafWebLayoutConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: layoutDialect
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: defaultTemplateResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: thymeleafResourceResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: spring.thymeleaf.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.security.SecurityFilterAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: securityFilterChainRegistration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: transactionTemplate
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: characterEncodingFilter
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: multipartConfigElement
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: multipartResolver
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: multipart.CONFIGURATION_PROPERTIES
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.websocket.WebSocketMessagingAutoConfiguration$WebSocketMessageConverterConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - #-----bean definition name: org.springframework.boot.autoconfigure.websocket.WebSocketMessagingAutoConfiguration
+[INFO] cn.demo.random.event.ContextReloadListener - Environment property log.path : true
+[INFO] cn.demo.random.event.ContextReloadListener - Environment property log.file : true
+[INFO] cn.demo.random.event.ContextReloadListener - Environment property log.level : true
+[INFO] application - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+[INFO] org.eclipse.jetty.server.ServerConnector - Started ServerConnector@1188e08b{HTTP/1.1}{0.0.0.0:8001}
+[INFO] org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer - Jetty started on port(s) 8001 (http/1.1)
+[INFO] cn.demo.random.runner.ApplicationRunnerImp - -------------------------Application started--------------------------args:org.springframework.boot.DefaultApplicationArguments@25af1dbf
+[INFO] cn.demo.random.runner.CommandLineRunnerImp - -------------------------CommandLineRunner: Application started--------------------------args:
+[INFO] cn.demo.random.Application - Started Application in 9.316 seconds (JVM running for 9.763)
